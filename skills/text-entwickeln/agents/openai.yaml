@@ -1,0 +1,6 @@
+interface:
+  display_name: "Text gemeinsam entwickeln"
+  short_description: "Schreibauftrag klären und direkt nutzbaren Text verfassen"
+  default_prompt: "Nutze $text-entwickeln, um meinen Schreibauftrag mit mir zu klären und anschließend den fertigen Text zu verfassen."
+policy:
+  allow_implicit_invocation: true

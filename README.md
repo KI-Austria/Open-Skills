@@ -4,6 +4,22 @@ Praktische, offen verfügbare Skills von KI Austria. Sie helfen KI-Assistenten, 
 
 ## Verfügbare Skills
 
+### Bild gemeinsam entwickeln
+
+Der Skill führt von einer ersten Bildidee über ein kurzes, adaptives Interview zu einem klaren Bildbriefing, einem präzisen Bildprompt und – wenn ein Bildwerkzeug verfügbar ist – zum fertigen Bild. Er stellt immer nur die nächste entscheidende Frage und nutzt bereits genannten Kontext weiter.
+
+```bash
+npx skills add KI-Austria/Open-Skills --skill bild-entwickeln
+```
+
+### Text gemeinsam entwickeln
+
+Der Skill klärt einen Schreibauftrag in einem kurzen, adaptiven Gespräch und liefert danach den direkt nutzbaren Text, eine kompakte Conceptmap und eine nachvollziehbare Begründung der sichtbaren Textentscheidungen. Er fragt nur nach Informationen, die das Ergebnis wesentlich verändern.
+
+```bash
+npx skills add KI-Austria/Open-Skills --skill text-entwickeln
+```
+
 ### Kennzeichnungspflicht
 
 Der Skill prüft Inhalte vor einer Veröffentlichung nach den Transparenzregeln des EU AI Act. Er nutzt zuerst den vorhandenen Kontext, fragt nur bei entscheidenden Lücken kompakt nach, empfiehlt danach Kennzeichnung, Wortlaut und Platzierung und setzt die freigegebene Fassung auf Wunsch in Text oder Bild um.
@@ -12,19 +28,19 @@ Der Skill prüft Inhalte vor einer Veröffentlichung nach den Transparenzregeln 
 npx skills add KI-Austria/Open-Skills --skill kennzeichnungspflicht
 ```
 
-Danach im Agenten aufrufen:
+Danach den jeweiligen Skill im Agenten aufrufen, zum Beispiel:
 
 ```text
-kennzeichnungspflicht
+bild-entwickeln
 ```
 
 oder, wenn die Plattform Skills mit `$` adressiert:
 
 ```text
-$kennzeichnungspflicht Prüfe diesen Inhalt vor der Veröffentlichung.
+$bild-entwickeln Entwickle mit mir ein Bild für diese Idee.
 ```
 
-Die Installation über `npx skills` verwendet ein unabhängiges Drittanbieter-Werkzeug. Alternativ kann der Ordner `skills/kennzeichnungspflicht` manuell in das Skill-Verzeichnis des verwendeten Agenten kopiert werden.
+Die Installation über `npx skills` verwendet ein unabhängiges Drittanbieter-Werkzeug. Alternativ kann der jeweilige Ordner unter `skills/` manuell in das Skill-Verzeichnis des verwendeten Agenten kopiert werden.
 
 ## So arbeitet der Skill
 

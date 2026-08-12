@@ -1,0 +1,6 @@
+interface:
+  display_name: "Bild gemeinsam entwickeln"
+  short_description: "Bildidee im Gespräch klären und als Bild umsetzen"
+  default_prompt: "Nutze $bild-entwickeln, um mit mir aus dieser Idee ein klares Bildbriefing und anschließend das fertige Bild zu entwickeln."
+policy:
+  allow_implicit_invocation: true
