@@ -1,0 +1,9 @@
+interface:
+  display_name: "Kennzeichnungspflicht"
+  short_description: "EU-KI-Kennzeichnung prüfen und sicher umsetzen"
+  icon_small: "./assets/eu-icons/LABEL_AI_black.png"
+  icon_large: "./assets/eu-icons/LABEL_AI GENERATED_black.png"
+  brand_color: "#E42313"
+  default_prompt: "Nutze $kennzeichnungspflicht, um diesen Inhalt zu prüfen und mir zuerst die passende Kennzeichnung zu empfehlen."
+policy:
+  allow_implicit_invocation: true
