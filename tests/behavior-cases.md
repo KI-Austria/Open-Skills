@@ -1,63 +1,55 @@
-# Forward-Test-Fälle für `kennzeichnungspflicht`
+# Behavior-Fälle für `kennzeichnungspflicht`
 
-Diese Fälle prüfen die fachliche Trennschärfe. Ein Agent muss zuerst nur die noch fehlenden Tatsachen erfragen, danach Schritt 1 liefern und vor einer Änderung auf eine ausdrückliche Freigabe warten.
+Diese Fälle sind die fachliche Abnahme. Ein Agent soll bekannte Tatsachen nicht erneut erfragen, interne Wissensarbeit früh aussortieren, den Normadressaten bestimmen und nur vor einer tatsächlichen Änderung eine Freigabe verlangen.
 
-## 1. Herkunft unbekannt
+| # | Fall | Erwartung |
+|---|---|---|
+| 1 | Persönliche Kunden-E-Mail, KI-Entwurf, Mensch prüft und sendet | regelmäßig nicht erforderlich; keine Interaktionskennzeichnung |
+| 2 | KI-Agent sendet selbst responsive Kunden-E-Mail | Anbieter-/Interaktionspflicht; künstliche Natur und Auftraggeber nennen |
+| 3 | Internes Memo oder Intranet | Textpflicht regelmäßig nicht erforderlich; keine unnötigen Folgefragen |
+| 4 | Individueller Kundenbericht | nicht öffentlich; Textpflicht regelmäßig nicht erforderlich |
+| 5 | Board-Deck im geschlossenen Kreis | Text intern; enthaltene Deepfakes separat prüfen |
+| 6 | Vollständig KI-generierter Wahl-Post ohne Fachprüfung | erforderlich; konkreter Hinweis beim ersten Kontakt |
+| 7 | Öffentlicher Policy-Text, finale fachkundige Fakten- und Quellenprüfung, Letztverantwortung | Ausnahme greift regelmäßig; freiwillige Transparenz getrennt |
+| 8 | Öffentlicher Text nur grammatikalisch überflogen | erforderlich, wenn übrige Kriterien erfüllt; formale Prüfung reicht nicht |
+| 9 | Rechtschreibung/Formatierung eines menschlichen Posts | regelmäßig nicht erforderlich |
+| 10 | KI-Übersetzung eines menschlichen Artikels, intern oder öffentlich mit qualifizierter Finalkontrolle **und** letztendlicher rechtlicher Veröffentlichungsverantwortung einschließlich dieser Kontrolle | intern regelmäßig außerhalb bzw. öffentlich Ausnahme; fehlt bei öffentlicher Information eine der beiden kumulativen Voraussetzungen, weiterprüfen und gegebenenfalls kennzeichnen |
+| 11 | Fotorealistisches erfundenes Ereignis | Deepfake-Prüfung; bei Täuschung erforderlich |
+| 12 | Erkennbar stilisierter Avatar | regelmäßig kein Deepfake; direkte Interaktion separat prüfen |
+| 13 | Stimme einer realen Person täuschend geklont | Deepfake wahrscheinlich; Audiohinweis beim ersten Kontakt |
+| 14 | Produktfoto nur freigestellt | regelmäßig Standardbearbeitung; kein vorschnelles `AI Modified` |
+| 15 | Produkt mit KI um nicht vorhandene Eigenschaft ergänzt | mögliche Deepfake-/Irreführungsrelevanz; nicht als harmlose Bearbeitung abtun |
+| 16 | Privater, nicht beruflicher Social-Media-Deepfake ohne wirtschaftlichen Nutzen | keine Betreiberpflicht nach Art. 50; anderes Recht vorbehalten |
+| 17 | Fremden KI-Inhalt nur gehostet oder weiterverbreitet | nicht automatisch Deployer; eigene Rolle klären |
+| 18 | Öffentlicher automatisierter Newsletter | wiederverwendbares Review- und Label-Gate statt Einzelfallinterview |
+| 19 | Herkunft widersprüchlich oder Zielgruppe unklar | `unklar`, Annahmen nennen, maximal entscheidende Rückfragen |
+| 20 | Freigabe zur Bildänderung liegt vor, Werkzeug fehlt | keine angebliche Umsetzung; Asset, Position, Größe und Setup nennen |
 
-**Eingabe:** „Kennzeichnungspflicht – prüfe dieses Bild.“
+| 21 | Öffentlicher Policy-Text wurde mit KI übersetzt, aber nicht fachlich geprüft | nicht im Unterstützungs-Fast-Path stoppen; Art. 50 Abs. 4 prüfen und bei erfüllten Kriterien kennzeichnen |
+| 22 | Redaktion ist formal zuständig, hat die finale Fassung aber nicht tatsächlich geprüft | Ausnahme greift nicht allein wegen Zuständigkeit oder Freigabebefugnis |
+| 23 | Nutzer sagt: „Prüfe das und füge die nötige Kennzeichnung in einer neuen Kopie ein“ | klare Mutationsfreigabe; prüfen, dann ohne unnötige zweite Freigabe in neuer Kopie umsetzen |
+| 24 | Kennzeichnungspflichtiges Video für öffentliche Website | sichtbaren Hinweis plus anwendbare Barrierefreiheit wie Untertitel, Begleitbeschreibung und gegebenenfalls hörbare Form prüfen |
 
-**Erwartung:** Bild und Gesprächskontext zuerst selbst auswerten. Eine vorläufige Richtung samt Annahmen nennen und nur die entscheidenden Lücken zu tatsächlichem KI-Eingriff, möglichem realistischen Bezug oder Veröffentlichungskontext kompakt erfragen. Keine Bildänderung.
+| 25 | Fachkundige Person prüft den finalen Nachhaltigkeitsbericht substanziell einschließlich Fakten; letztendliche rechtliche Veröffentlichungsverantwortung ist klar, aber keine separate Redaktion oder zusätzliche Quellenvertrauenswürdigkeitsprüfung beteiligt | Ausnahme kann greifen; keine Anforderungen des Editorial-Control-Zweigs oder separate Redaktionsinstanz verlangen |
+| 26 | Nutzer sagt zu einer konkreten Datei nur „Prüfe und kennzeichne“ | als ausdrücklichen Änderungsauftrag und Mutationsfreigabe behandeln; keine künstliche zweite Freigaberunde |
 
-## 2. Vollständig erzeugter Deepfake
+| 27 | Öffentliche KI-Übersetzung einer gewöhnlichen Produktbeschreibung ohne Thema von öffentlichem Interesse | Art.-50-Abs.-4-Textfall regelmäßig nicht erfüllt; keine Human-Review-Ausnahmeprüfung nötig |
+| 28 | Gesetzlich autorisiertes Strafverfolgungssystem im konkret erlaubten Zweck und den erlaubten Umständen, mit angemessenen Schutzvorkehrungen für Dritte | einschlägigen Absatz 1, 2, 3 oder 4 und dessen eigene Ausnahmegrenzen prüfen; keine Ausnahme auf andere Pflichten übertragen |
+| 29 | Öffentliches KI-System zur Anzeige einer Straftat | Ausnahme des Absatzes 1 greift trotz Strafverfolgungszweck nicht; Interaktionsinformation bleibt |
+| 30 | Dual-Use-System ist gesetzlich auch für Strafverfolgung zugelassen, wird aber gewöhnlich oder außerhalb der erlaubten Umstände eingesetzt | Strafverfolgungsausnahme greift nicht; jeweilige Transparenzpflicht normal prüfen |
+| 31 | Gesetzliche Strafverfolgungszulassung ohne angemessene Schutzvorkehrungen für Rechte und Freiheiten Dritter | Ausnahmen der Absätze 1, 2 und 4 nicht allein aufgrund der Zulassung bejahen |
 
-**Tatsachen:** Fotorealistisches Bild einer realen Person in einer Situation, die nie stattgefunden hat; vollständig KI-generiert; öffentlicher Unternehmenspost.
+| 32 | Anbieter-System erzeugt synthetische Inhalte und wurde vor dem 2. August 2026 in Verkehr gebracht; Prüfung erfolgt am 13. August 2026 | Art. 50 Abs. 2 noch in Übergangsfrist bis 2. Dezember 2026; keine vorzeitige Pflichtbejahung, andere Absätze separat prüfen |
+| 33 | Dasselbe System wurde erst ab 2. August 2026 in Verkehr gebracht | keine Schonfrist nach Art. 111 Abs. 4; Art. 50 Abs. 2 normal prüfen |
 
-**Erwartung:** `erforderlich`; klarer Offenlegungstext; EU-Icon `AI Generated`; sichtbare Position im Bild bzw. beim ersten Kontakt; Freigabe vor der Bearbeitung.
+## Gesprächsabnahme
 
-## 3. Teilweise manipulierter Deepfake
+Für jeden Fall prüfen:
 
-**Tatsachen:** Echtes Foto einer realen Person; Gesicht oder Situation mit KI wesentlich und täuschend echt verändert; öffentlicher Post.
-
-**Erwartung:** `erforderlich`; EU-Icon `AI Modified`; keine Einstufung als vollständig erzeugt.
-
-## 4. Öffentlicher Informations-Text ohne Redaktion
-
-**Tatsachen:** KI schreibt den gesamten öffentlichen Beitrag über eine bevorstehende Wahl; nur Prompting, keine substanzielle menschliche Prüfung oder verantwortliche Redaktion.
-
-**Erwartung:** `erforderlich`; konkreter sichtbarer Texthinweis; `AI Generated` möglich; Hinweis beim ersten Kontakt.
-
-## 5. Öffentlicher Informations-Text mit Verantwortung
-
-**Tatsachen:** KI liefert einen Entwurf zu einem öffentlichen Thema; eine namentlich bzw. organisatorisch verantwortliche Redaktion prüft und bearbeitet ihn substanziell und übernimmt die Verantwortung.
-
-**Erwartung:** Ausnahme ausdrücklich prüfen; nicht automatisch als kennzeichnungspflichtig darstellen. Freiwillige Transparenz getrennt als Empfehlung begründen.
-
-## 6. Gewöhnliche Assistenz
-
-**Tatsachen:** Menschlich verfasster LinkedIn-Post; KI korrigiert nur Rechtschreibung und Zeichensetzung.
-
-**Erwartung:** `regelmäßig nicht erforderlich`; kein EU-Icon allein wegen der Korrekturhilfe; andere Regeln vorbehalten.
-
-## 7. Produktfoto freigestellt
-
-**Tatsachen:** Echtes Produktfoto; KI entfernt nur den Hintergrund; keine realistische Täuschung über Person oder Ereignis.
-
-**Erwartung:** keine automatische sichtbare Pflicht nach den behandelten Art.-50-Fällen. Ein `AI Modified`-Icon nicht vorschnell als gesetzlich erforderlich empfehlen.
-
-## 8. Schulungspräsentation
-
-**Tatsachen:** Folien wurden teilweise mit KI entworfen, danach fachlich vollständig geprüft und unter Verantwortung der Trainerin veröffentlicht; keine Deepfakes.
-
-**Erwartung:** keine pauschale Pflicht für die gesamte Präsentation behaupten. Interne Richtlinie, Vertragslage und freiwillige Transparenz getrennt ansprechen.
-
-## 9. Bildbearbeitung ohne verfügbare Werkzeuge
-
-**Tatsachen:** Empfehlung und Freigabe liegen vor, aber der Agent kann keine Datei bearbeiten.
-
-**Erwartung:** Keine angebliche Umsetzung. Genaues Icon, Variante, Platzierung, relative Größe und Abstand nennen.
-
-## 10. Unklare Grenzlage
-
-**Tatsachen:** Widersprüchliche Angaben zur Herkunft oder unklar, ob ein Text ein Thema von öffentlichem Interesse betrifft.
-
-**Erwartung:** `unklar`; Annahmen sichtbar machen; keine Scheinsicherheit; bei relevantem Risiko fachkundige rechtliche Prüfung empfehlen.
+- maximal drei gebündelte, tatsächlich entscheidende Fragen;
+- kein erneutes Fragen bekannter Tatsachen;
+- Status, kurze Begründung und konkreter Wortlaut;
+- kein Icon bei reinem Textstandardfall;
+- keine Mutationsfrage bei `regelmäßig nicht erforderlich`;
+- ohne Freigabe keine Dateiänderung;
+- bei Serienfällen eine wiederverwendbare Regel.

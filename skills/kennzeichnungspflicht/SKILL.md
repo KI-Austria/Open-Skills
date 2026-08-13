@@ -1,104 +1,103 @@
 ---
 name: kennzeichnungspflicht
-description: Prüfe Inhalte vor Veröffentlichung auf Transparenz- und Kennzeichnungspflichten nach Art. 50 EU AI Act, werte vorhandenen Kontext zuerst selbst aus, frage nur bei entscheidenden Lücken kompakt nach, empfehle eine konkrete Kennzeichnung und füge sie erst nach ausdrücklicher Freigabe in Text oder Bild ein. Verwende den Skill bei Postings, Webseiten, Präsentationen, Schulungen, Dokumenten, Bildern, Audio oder Video sowie bei Fragen wie „Muss ich das als KI kennzeichnen?“, „Kennzeichnungspflicht“ oder „Füge das EU-KI-Label ein“.
+description: Prüfe berufliche Texte und Medien vor Veröffentlichung nach Art. 50 EU AI Act. Sortiere interne Wissensarbeit und Einzelkorrespondenz sofort aus, bestimme den richtigen Normadressaten, frage nur entscheidende Lücken nach und setze eine Kennzeichnung nur vor einer tatsächlichen Änderung nach Freigabe um. Verwende den Skill bei E-Mails, Berichten, Präsentationen, Postings, Webseiten, Bildern, Audio, Video, Chatbots oder Fragen wie „Muss ich das als KI kennzeichnen?“.
+version: 2.0.0
+author: KI Austria
+license: MIT
+metadata:
+  hermes:
+    tags: [eu-ai-act, transparency, knowledge-work, media]
+    related_skills: []
 ---
 
 # Kennzeichnungspflicht
 
-## Zweck und Grenze
+## Ziel und Grenze
 
-Gib eine praktische, quellenbasierte Vorprüfung nach dem aktuell geltenden EU-Rechtsrahmen. Trenne strikt zwischen rechtlich erforderlich, vorsorglich empfohlen, regelmäßig nicht erforderlich und unklar.
+Liefere eine praktische, quellenbasierte Vorprüfung – keine Rechtsberatung, Compliance-Garantie oder Haftungsfreistellung. Trenne **erforderlich**, **vorsorglich empfohlen**, **regelmäßig nicht erforderlich** und **unklar**. Die Verantwortung für konkrete Nutzung und Veröffentlichung bleibt bei der handelnden Person oder Organisation; gesetzlicher Normadressat ist je nach Fall Anbieter oder Betreiber.
 
-Gib keine Rechtsberatung, Compliance-Garantie oder Haftungsfreistellung. Weise bei Grenzfällen, hohem Risiko oder fehlenden Tatsachen auf eine qualifizierte rechtliche Prüfung hin. Die Verantwortung für Inhalt und Veröffentlichung bleibt bei der veröffentlichenden Person oder Organisation.
+Lies vor der Prüfung [references/eu-baseline.md](references/eu-baseline.md). Nutze für typische Büro- und Medienfälle [references/work-examples.md](references/work-examples.md). Lies [references/icon-selection.md](references/icon-selection.md) nur vor einer Icon-Empfehlung oder Bildbearbeitung.
 
-Lies vor jeder fachlichen Prüfung [references/eu-baseline.md](references/eu-baseline.md). Lies vor einer Icon-Empfehlung oder Bildbearbeitung zusätzlich [references/icon-selection.md](references/icon-selection.md).
+## Schnellpfad für Wissensarbeit
 
-## Verbindlicher Ablauf
+Prüfe in dieser Reihenfolge und stoppe, sobald der Fall eindeutig ist:
 
-Arbeite immer in zwei getrennten Schritten. Überspringe die Freigabegrenze nicht.
+1. **Nur Unterstützung:** Rechtschreibung, Grammatik, Formatierung oder Recherche ohne KI-generierten bzw. KI-manipulierten veröffentlichten Inhalt → regelmäßig nicht erforderlich. Bei Übersetzung oder Stilbearbeitung eines öffentlichen Informationstexts zuerst sämtliche Tatbestandsmerkmale prüfen, insbesondere Informationszweck und Thema von öffentlichem Interesse. Fehlt eines, liegt dieser Textfall regelmäßig nicht vor. Nur wenn alle erfüllt sind, zusätzlich qualifizierte Kontrolle der finalen Fassung und letztendliche rechtliche Veröffentlichungsverantwortung einschließlich dieser Kontrolle prüfen.
+2. **Nicht veröffentlicht:** berufliche Einzelkorrespondenz, individueller Kundenbericht, kleine geschlossene Gruppe oder organisationsinterne Kommunikation einschließlich Intranet → Art.-50-Textkennzeichnung regelmäßig nicht erforderlich. Deepfakes, direkte KI-Interaktion, andere Gesetze, Verträge oder interne Regeln separat prüfen.
+3. **Menschlich vermittelte Kommunikation:** Ein Mensch hat einen KI-Entwurf inhaltlich geprüft, versendet ihn selbst und bleibt der tatsächliche Gesprächspartner → regelmäßig keine direkte KI-Interaktion.
+4. **Öffentlicher Text:** Weiterprüfen, wenn ein KI-generierter oder KI-manipulierter Text veröffentlicht wird, die Öffentlichkeit informieren soll und ein Thema von öffentlichem Interesse betrifft. Für die Ausnahme müssen kumulativ eine qualifizierte Kontrolle der finalen Fassung und die letztendliche rechtliche Veröffentlichungsverantwortung einschließlich dieser Kontrolle vorliegen.
+5. **Bild, Audio oder Video:** Nur als Deepfake prüfen, wenn der Inhalt hinsichtlich Authentizität oder Wahrheit täuschen könnte. Fotorealismus allein genügt nicht.
 
-### Schritt 0: Kontext selbst prüfen, nur entscheidende Lücken erfragen
+## Prüflogik
 
-Untersuche zuerst selbstständig den bereitgestellten Inhalt, sein Format, Metadaten und den bisherigen Gesprächskontext. Extrahiere alle bereits bekannten Tatsachen und frage sie nicht erneut ab. Leite die Entstehungsgeschichte trotzdem niemals allein aus Stil, Metadaten oder Aussehen ab.
+### 1. Tatsachen und Normadressat bestimmen
 
-Gehe direkt zu Schritt 1, wenn die entscheidenden Tatsachen eindeutig vorliegen. Stelle nur dann Rückfragen, wenn eine fehlende Tatsache die Einstufung oder die Wahl des Icons tatsächlich ändern kann. Stelle typischerweise null bis zwei und niemals mehr als drei kurze, gebündelte Fragen:
+Nutze Inhalt, Metadaten und Gesprächskontext zuerst selbst. Leite die Entstehungsgeschichte nie nur aus Stil oder Aussehen ab.
 
-1. **KI-Anteil:** Was hat die KI tatsächlich erzeugt oder verändert: ganzer Inhalt, einzelne Teile oder nur Assistenz wie Rechtschreibung, Recherche oder Formatierung?
-2. **Inhalt:** Handelt es sich um Bild, Audio oder Video mit realistisch dargestellten Personen/Ereignissen, um einen Text zu einem Thema von öffentlichem Interesse oder um einen anderen Inhalt?
-3. **Veröffentlichung:** Wo und in welcher Rolle wird veröffentlicht; gab es eine inhaltliche menschliche Prüfung und übernimmt eine Person oder Organisation redaktionelle Verantwortung?
+Bestimme den **Normadressat**:
 
-Frage nur nach Punkten, die nicht schon eindeutig beantwortet sind. Wenn eine Antwort eine neue wesentliche Lücke öffnet, stelle höchstens eine kurze Anschlussfrage. Liefere zusammen mit den Fragen bereits eine hilfreiche vorläufige Richtung, soweit dies möglich ist, und kennzeichne deren Annahmen sichtbar. Gib erst nach Klärung der entscheidenden Lücken eine abschließende Einstufung. Verändere keine Datei.
+- **Anbieter** für direkte KI-Interaktion und maschinenlesbare Markierung nach Art. 50 Abs. 1 und 2; bei Absatz 2 am Stichtag zusätzlich Inverkehrbringungsdatum und Übergangsfrist bis 2. Dezember 2026 prüfen;
+- **Betreiber/Deployer** für Emotionserkennung, biometrische Kategorisierung, Deepfakes und bestimmte öffentliche Texte nach Art. 50 Abs. 3 und 4;
+- Beschäftigte unter Weisung, reine Empfänger, Hosts oder Weiterverbreiter sind nicht automatisch eigene Betreiber;
+- rein persönliche und nicht berufliche Nutzung natürlicher Personen gesondert behandeln.
 
-### Schritt 1: Prüfen und einen konkreten Weg empfehlen
+Prüfe zusätzlich für den jeweils einschlägigen Absatz, ob das konkrete System gesetzlich für Strafverfolgungszwecke zugelassen ist und die absatzspezifischen Grenzen und Schutzvorkehrungen erfüllt. Übertrage eine Ausnahme nie pauschal zwischen Anbieter- und Betreiberpflichten; Details stehen in der Baseline.
 
-Bewerte den Fall anhand der Referenz in dieser Reihenfolge:
+### 2. Nur entscheidende Lücken fragen
 
-1. Bestimme Rolle, Medium, KI-Eingriff und Veröffentlichungskontext.
-2. Prüfe, ob eine sichtbare Pflicht nach Art. 50 betroffen ist.
-3. Trenne die sichtbare Kennzeichnung von möglichen maschinenlesbaren Pflichten des Systemanbieters.
-4. Ordne den Fall als **erforderlich**, **vorsorglich empfohlen**, **regelmäßig nicht erforderlich** oder **unklar** ein.
-5. Wähle bei Bildern nur ein offizielles, unverändertes EU-Icon nach der Auswahlreferenz.
-6. Formuliere den konkreten Hinweis und bestimme dessen Platzierung am ersten Kontaktpunkt.
+Gehe ohne Rückfrage zur Einstufung, wenn alles Relevante bekannt ist. Sonst stelle gebündelt höchstens drei kurze Fragen:
 
-Antworte kompakt in diesem Schema:
+1. **KI-Eingriff:** Was hat die KI in der finalen Fassung tatsächlich erzeugt oder substanziell verändert?
+2. **Zielgruppe und Zweck:** Intern, Einzelperson/geschlossene Gruppe oder öffentlich – und soll der Text die Öffentlichkeit über ein Thema von öffentlichem Interesse informieren?
+3. **Kontrolle und Rolle:** Wer entschied über den KI-Einsatz? Wurde die finale Fassung entweder von einer fachkundigen natürlichen Person einschließlich Fakten substanziell geprüft oder durch eine verantwortliche Redaktion einschließlich Fakten und Quellenvertrauenswürdigkeit tatsächlich substanziell kontrolliert – und wer trägt die letztendliche rechtliche Verantwortung für die Veröffentlichung einschließlich dieser Kontrolle?
+
+Nenne bereits eine vorläufige Richtung mit sichtbarer Annahme. Frage bekannte Tatsachen nicht erneut.
+
+### 3. Kompakt entscheiden
 
 ```text
-Vorprüfung: [Status]
-Warum: [2–4 verständliche Sätze mit den entscheidenden Tatsachen]
-Empfehlung: [genauer Wortlaut]
-Platzierung: [konkreter Ort und Zeitpunkt]
-EU-Icon: [Basic | AI Generated | AI Modified | keines] – [Variante und Grund]
-Offen/Risiko: [nur falls nötig]
+Vorprüfung: [erforderlich | vorsorglich empfohlen | regelmäßig nicht erforderlich | unklar]
+Warum: [entscheidende Tatsachen in 2–4 einfachen Sätzen]
+Empfehlung: [genauer Wortlaut oder „keine Kennzeichnung nach Art. 50 nötig“]
+Platzierung: [nur wenn ein Hinweis sinnvoll ist]
+EU-Icon: [Basic | AI Generated | AI Modified | keines] – [bei Text regelmäßig keines; sonst nur bei sinnvoller Medienkennzeichnung]
+Offen/Risiko: [nur falls relevant]
 Stand: [Datum] · Grundlage: Art. 50 EU AI Act und EU-Kommissionsleitlinien
-
-Soll ich diese Fassung jetzt in den Text bzw. in eine neue Bilddatei einfügen?
 ```
 
-Bei noch offenen entscheidenden Tatsachen verwende stattdessen kurz:
+Bei `regelmäßig nicht erforderlich` schließe ab. Biete keine Änderung an, außer eine freiwillige Kennzeichnung ist konkret sinnvoll. Bei Serienfällen liefere zusätzlich eine wiederverwendbare Regel für den Workflow statt jeden Inhalt einzeln zu interviewen.
 
-```text
-Vorläufige Richtung: [wahrscheinlicher Status unter klar genannter Annahme]
-Mein Vorschlag: [bereits hilfreicher nächster Weg]
-Damit ich richtig entscheide: [nur 1–3 entscheidende Fragen]
-```
+## Umsetzen – nur mit Mutationsfreigabe
 
-Füge in Schritt 1 nichts ein. Eine Aufforderung wie „prüfe und kennzeichne“ ersetzt die Freigabe nach der Vorschau nicht.
+**Nur vor einer tatsächlichen Änderung** an Text oder Datei ist eine ausdrückliche Freigabe nötig. Reine Prüfung, Begründung und ein vorgeschlagener Wortlaut benötigen keine zweite Runde. Eine imperative Anweisung wie „prüfe und kennzeichne“ zu einem konkreten Inhalt oder einer konkreten Datei gilt als Mutationsfreigabe, auch wenn Wortlaut und genaue Umsetzung erst ermittelt werden. Nur eine reine Prüfbitte wie „prüfe, ob eine Kennzeichnung nötig ist“ oder echte Unklarheit über das gewünschte Ziel erfordert vor der Änderung eine Rückfrage.
 
-### Schritt 2: Erst nach ausdrücklicher Freigabe umsetzen
+### Text
 
-Akzeptiere nur eine eindeutige Freigabe wie „ja“, „einfügen“, „umsetzen“ oder eine ausdrücklich korrigierte Fassung. Bei Änderungen am Vorschlag zeige die korrigierte Kurzfassung erneut und hole dafür die Freigabe ein.
+Füge den freigegebenen Hinweis beim ersten Kontakt mit dem betroffenen Inhalt klar und leicht erkennbar ein. Erhalte Ton und Format.
 
-#### Text
+### Bild
 
-Füge den freigegebenen Hinweis so ein, dass er beim ersten Kontakt mit dem betroffenen Inhalt klar und leicht erkennbar ist. Erhalte Ton und Format. Kennzeichne den geänderten Abschnitt in der Übergabe oder liefere den vollständigen finalen Text, wenn der Nutzer ihn direkt braucht.
-
-#### Bild
-
-Nutze ausschließlich die Dateien in `assets/eu-icons/`. Erzeuge das EU-Icon nie neu und verändere seine Proportionen, Farben oder Beschriftung nicht.
-
-Wenn Python und Pillow verfügbar sind, führe `scripts/label_image.py` aus. Erzeuge immer eine neue Datei mit dem Zusatz `-gekennzeichnet`; überschreibe das Original nicht. Prüfe das Ergebnis anschließend visuell. Beispiel:
+Nutze ausschließlich vollständige Dateien aus `assets/eu-icons/`. Verändere Farben, Beschriftung, Seitenverhältnis oder innere Abstände nicht. Prüfe vorab Python und Pillow; Setup siehe [references/image-setup.md](references/image-setup.md).
 
 ```bash
 python scripts/label_image.py eingabe.png --kind generated --position bottom-right
 ```
 
-Wenn keine Bildbearbeitung verfügbar ist, behaupte keine erfolgreiche Änderung. Liefere stattdessen die gewählte Asset-Datei, Zielposition, empfohlene Größe und Abstände.
+Erzeuge immer eine neue Datei mit `-gekennzeichnet`, überschreibe das Original nicht und prüfe Ergebnis, Lesbarkeit, Kontrast, sichere Position und Orientierung visuell. Verwende ein eigenes, nicht gruppen- oder weltbeschreibbares Zielverzeichnis; unsichere gemeinsame Verzeichnisse werden abgelehnt. Das Skript entfernt standardmäßig sämtliche Metadaten einschließlich EXIF, ICC, DPI und PNG-Text. Übernimm Metadaten nur ausdrücklich, nach Prüfung und ohne Formatwechsel mit `--preserve-metadata`; unterstützt werden formatspezifisch ICC, DPI und normalisierte EXIF sowie bei PNG Textfelder, insgesamt größenbegrenzt. Wenn das nicht möglich ist, behaupte keine Umsetzung.
 
-#### Präsentation, Dokument oder PDF
+### Präsentation, Dokument oder PDF
 
-Nutze vorhandene Werkzeuge für das Dateiformat. Platziere den sichtbaren Hinweis auf der ersten betroffenen Folie oder Seite und bei Bedarf zusätzlich direkt am betroffenen Element. Erzeuge eine neue Datei und erhalte das Original.
+Prüfe zuerst Öffentlichkeit und konkretes Element. Der Dateityp löst keine Pflicht aus. Kennzeichne nur betroffene Inhalte beim ersten Kontakt, erhalte das Original und erzeuge eine neue Datei.
 
-#### Audio oder Video
+### Audio oder Video
 
-Empfehle bzw. erstelle einen klar wahrnehmbaren Hinweis beim ersten Kontakt; bei Video in der Regel als sichtbares Overlay, bei Audio als hörbaren Hinweis. Ergänze den Hinweis in Beschreibung oder Begleittext, wenn der Inhalt außerhalb der Datei geteilt werden kann. Verändere Medien nur mit einer dafür verfügbaren Bearbeitungsmöglichkeit und nach Freigabe.
+Bei erforderlicher Offenlegung: im Video sichtbar, im Audio hörbar und bei losgelöster Weitergabe zusätzlich im Begleittext. Prüfe anwendbare Barrierefreiheit: ausreichender Kontrast, Alternativtext bzw. zugängliche Begleitbeschreibung sowie bei Video Untertitel und gegebenenfalls eine hörbare Form. Verändere Medien nur mit geeignetem Werkzeug und Mutationsfreigabe.
 
-## Qualitätsregeln
+## Fertig, wenn
 
-- Behaupte niemals, eine Datei geändert zu haben, ohne das Ergebnis zu prüfen.
-- Verwende einfache deutsche Sprache und erkläre Rechtsbegriffe kurz.
-- Nenne das Prüfdatum und verlinke in einer ausführlichen Antwort die offiziellen Quellen aus der Referenz.
-- Bezeichne freiwillige EU-Icons nicht als zwingend, wenn nur der klare Offenlegungshinweis verpflichtend ist.
-- Behandle Barrierefreiheit, Kontrast, Lesbarkeit und Weitergabe als Teil einer guten Kennzeichnung.
-- Empfehle bei einer unklaren Entstehungsgeschichte keine scheinpräzise Icon-Kategorie.
-- Dokumentiere Annahmen und trenne sie sichtbar von bestätigten Tatsachen.
-- Verwandle die Prüfung nicht in ein Interview: Nutze vorhandenen Kontext und frage nur entscheidungsrelevante Lücken.
+- Normadressat, Zielgruppe, KI-Eingriff und einschlägiger Art.-50-Fall geklärt sind;
+- interne Wissensarbeit nicht wie öffentliche Publikation behandelt wurde;
+- bestätigte Tatsachen und Annahmen getrennt sind;
+- Status, Wortlaut, gegebenenfalls Platzierung und anwendbare Barrierefreiheit konkret sind;
+- eine Dateiänderung nur nach Freigabe erfolgt und das neue Ergebnis wirklich geprüft wurde;
+- Prüfdatum und bei ausführlicher Antwort offizielle Quellen genannt sind.

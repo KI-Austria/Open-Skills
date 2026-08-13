@@ -22,7 +22,7 @@ npx skills add KI-Austria/Open-Skills --skill text-entwickeln
 
 ### Kennzeichnungspflicht
 
-Der Skill prüft Inhalte vor einer Veröffentlichung nach den Transparenzregeln des EU AI Act. Er nutzt zuerst den vorhandenen Kontext, fragt nur bei entscheidenden Lücken kompakt nach, empfiehlt danach Kennzeichnung, Wortlaut und Platzierung und setzt die freigegebene Fassung auf Wunsch in Text oder Bild um.
+Der Skill prüft berufliche Texte und Medien vor einer Veröffentlichung nach Art. 50 des EU AI Act. Er sortiert interne Kommunikation und persönliche berufliche Korrespondenz zuerst aus, bestimmt den richtigen Normadressaten und fragt nur bei entscheidenden Lücken nach. Danach liefert er Status, Wortlaut und Platzierung. Eine Freigabe braucht er nur, bevor er Text oder Dateien tatsächlich verändert.
 
 ```bash
 npx skills add KI-Austria/Open-Skills --skill kennzeichnungspflicht
@@ -44,9 +44,19 @@ Die Installation über `npx skills` verwendet ein unabhängiges Drittanbieter-We
 
 ## So arbeitet der Skill
 
-1. Er prüft Inhalt und Kontext selbst und stellt nur bei entscheidenden Lücken kurze Rückfragen – typischerweise keine bis zwei, niemals mehr als drei.
-2. Er liefert eine quellenbasierte Vorprüfung samt genauem Kennzeichnungsvorschlag.
-3. Erst nach ausdrücklicher Freigabe verändert er den Text oder erzeugt eine neue gekennzeichnete Bilddatei.
+1. Er nutzt zuerst den Schnellpfad: Standardbearbeitung, berufliche Einzelkorrespondenz und interne Kommunikation werden nicht wie öffentliche Publikationen behandelt.
+2. Er bestimmt Anbieter bzw. Betreiber, Inhalt, Zielgruppe und menschliche Kontrolle und stellt nur bei entscheidenden Lücken kurze Rückfragen.
+3. Er liefert eine quellenbasierte Vorprüfung samt genauem Kennzeichnungsvorschlag. Eine ausdrückliche Freigabe ist nur nötig, bevor er Text oder Dateien tatsächlich verändert.
+
+## Entwicklung und Tests
+
+```bash
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements-dev.txt
+.venv/bin/python -m pytest -q
+```
+
+Die Tests prüfen Skill-Verträge, portable Paketpfade, CLI-Hilfe, Originalschutz, atomare Ausgabe in vertrauenswürdige Zielverzeichnisse, Ablehnung gemeinsam beschreibbarer Zielverzeichnisse, Bild- und Dimensionslimits, Bildformate, Mindestlesbarkeit, Transparenz, EXIF-Ausrichtung sowie standardmäßige Entfernung und explizite, begrenzte Übernahme von Metadaten. Die fachlichen Abnahmefälle stehen in `tests/behavior-cases.md`.
 
 ## Hinweise
 

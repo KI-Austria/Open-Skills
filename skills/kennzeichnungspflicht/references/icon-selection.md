@@ -8,10 +8,10 @@ Die Icons sind ein freiwilliges Hilfsmittel zur einheitlichen Transparenz. Die O
 
 | Typ | Wann verwenden | Asset-Präfix |
 |---|---|---|
-| **AI Generated** | Der gesamte betroffene Deepfake bzw. öffentliche Informations-Text wurde vollständig durch KI erzeugt; außer Prompting gab es keine menschlich erstellten Bestandteile oder redaktionelle Kontrolle. | `LABEL_AI GENERATED_` |
-| **AI Modified** | Ein bereits bestehender menschlicher Inhalt wurde mit KI teilweise so verändert, dass ein betroffener Deepfake oder öffentlicher Informations-Text entstand. | `LABEL_AI MODIFIED_` |
-| **Basic AI** | KI war beteiligt, aber „vollständig erzeugt“ oder „teilweise verändert“ lässt sich nicht zuverlässig zuordnen; außerdem für eine eigene Textkennzeichnung oder interaktive Ebene. | `LABEL_AI_` |
-| **Keines** | Keine sichtbare Kennzeichnung empfohlen oder ein Icon wäre für den Fall irreführend. | – |
+| **AI Generated** | Der gesamte betroffene Deepfake bzw. Medieninhalt wurde vollständig durch KI erzeugt; außer Prompting gab es keine menschlich erstellten Bestandteile oder redaktionelle Kontrolle. | `LABEL_AI GENERATED_` |
+| **AI Modified** | Ein bereits bestehender menschlicher Medieninhalt wurde mit KI teilweise so verändert, dass ein betroffener Deepfake entstand. | `LABEL_AI MODIFIED_` |
+| **Basic AI** | KI war beteiligt, aber „vollständig erzeugt“ oder „teilweise verändert“ lässt sich nicht zuverlässig zuordnen. | `LABEL_AI_` |
+| **Keines** | Keine sichtbare Kennzeichnung empfohlen, der Fall betrifft nur Text oder ein Icon wäre für den Fall irreführend. Für kennzeichnungspflichtige Texte genügt regelmäßig ein klarer verständlicher Texthinweis; lege kein EU-Icon nahe, wenn es den Prüfstatus oder die Entstehung überzeichnet. | – |
 
 Wenn die Entstehung nicht bestätigt ist, stelle eine Rückfrage. Wähle nicht aufgrund des Aussehens.
 

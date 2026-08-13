@@ -6,7 +6,9 @@ import unittest
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SKILLS = ("bild-entwickeln", "text-entwickeln")
+SKILLS = ("bild-entwickeln", "text-entwickeln", "kennzeichnungspflicht")
+TEXT_SUFFIXES = {".md", ".py", ".txt", ".yaml", ".yml"}
+TEXT_FILENAMES = {"LICENSE"}
 
 
 class PortableSkillTest(unittest.TestCase):
@@ -38,11 +40,20 @@ class PortableSkillTest(unittest.TestCase):
     def test_public_packages_contain_no_local_absolute_paths(self) -> None:
         for slug in SKILLS:
             for path in (ROOT / "skills" / slug).rglob("*"):
-                if not path.is_file():
+                if not path.is_file() or (
+                    path.suffix.lower() not in TEXT_SUFFIXES and path.name not in TEXT_FILENAMES
+                ):
                     continue
                 text = path.read_text(encoding="utf-8")
                 self.assertNotIn("/Users/", text, str(path))
                 self.assertNotIn("Dropbox/", text, str(path))
+
+    def test_openai_icon_paths_exist(self) -> None:
+        for slug in SKILLS:
+            skill_dir = ROOT / "skills" / slug
+            config = (skill_dir / "agents" / "openai.yaml").read_text(encoding="utf-8")
+            for relative in re.findall(r'icon_(?:small|large):\s*"(.+?)"', config):
+                self.assertTrue((skill_dir / relative).resolve().is_file(), f"{slug}: {relative}")
 
 
 if __name__ == "__main__":

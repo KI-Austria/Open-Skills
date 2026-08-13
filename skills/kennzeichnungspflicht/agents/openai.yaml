@@ -1,9 +1,9 @@
 interface:
   display_name: "Kennzeichnungspflicht"
-  short_description: "EU-KI-Kennzeichnung prüfen und sicher umsetzen"
+  short_description: "Art. 50 für Wissensarbeit prüfen und gezielt umsetzen"
   icon_small: "./assets/eu-icons/LABEL_AI_black.png"
   icon_large: "./assets/eu-icons/LABEL_AI GENERATED_black.png"
-  brand_color: "#E42313"
+  brand_color: "#E80000"
   default_prompt: "Nutze $kennzeichnungspflicht, um diesen Inhalt zu prüfen und mir zuerst die passende Kennzeichnung zu empfehlen."
 policy:
   allow_implicit_invocation: true
