@@ -41,6 +41,9 @@ Diese Fälle sind die fachliche Abnahme. Ein Agent soll bekannte Tatsachen nicht
 
 | 32 | Anbieter-System erzeugt synthetische Inhalte und wurde vor dem 2. August 2026 in Verkehr gebracht; Prüfung erfolgt am 13. August 2026 | Art. 50 Abs. 2 noch in Übergangsfrist bis 2. Dezember 2026; keine vorzeitige Pflichtbejahung, andere Absätze separat prüfen |
 | 33 | Dasselbe System wurde erst ab 2. August 2026 in Verkehr gebracht | keine Schonfrist nach Art. 111 Abs. 4; Art. 50 Abs. 2 normal prüfen |
+| 34 | Mensch prüft und versendet einen KI-Entwurf als öffentlichen Newsletter zu einem Thema von öffentlichem Interesse | nicht im menschlich-vermittelten Interaktionspfad global freigeben; öffentlichen Text nach Art. 50 Abs. 4 prüfen |
+| 35 | Internes Board-Deck enthält ein täuschend echtes KI-Video einer realen Person | nur öffentlichen Textpfad aussortieren; Deepfake-Pfad weiterprüfen |
+| 36 | Geschlossene Kundenkommunikation erfolgt responsiv durch einen KI-Agenten | nur öffentlichen Textpfad aussortieren; direkte KI-Interaktion weiterprüfen |
 
 ## Gesprächsabnahme
 

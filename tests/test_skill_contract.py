@@ -29,12 +29,57 @@ class SkillContractTest(unittest.TestCase):
         for phrase in required_phrases:
             self.assertIn(phrase, text)
 
+    def test_clear_fast_paths_do_not_load_legal_references(self) -> None:
+        text = (SKILL_DIR / "SKILL.md").read_text(encoding="utf-8")
+        self.assertLessEqual(len(text), 8000)
+        self.assertNotIn("Lies vor der Prüfung [references/eu-baseline.md]", text)
+        for phrase in (
+            "Schnellpfad für Wissensarbeit – zuerst und ohne Referenzdatei",
+            "Lade die Rechtsbaseline erst",
+            "Lade Praxisfälle nur",
+            "Lade die Icon-Auswahl nur",
+            "Lade das Bild-Setup nur",
+            "Antworte in höchstens drei kurzen Zeilen",
+        ):
+            self.assertIn(phrase, text)
+
+    def test_fast_path_clearance_is_global_and_fail_closed(self) -> None:
+        text = (SKILL_DIR / "SKILL.md").read_text(encoding="utf-8")
+        for phrase in (
+            "schließt nur den öffentlichen Textpfad aus",
+            "schließt nur die direkte KI-Interaktion aus",
+            "nicht bei öffentlichem Newsletter, Posting oder öffentlicher Information stoppen",
+            "erst wenn anhand des bekannten Kontexts auch Deepfake",
+            "Emotionserkennung, biometrische Kategorisierung und Anbieterpflicht nach Absatz 2 ausgeschlossen sind",
+            "Keine Kennzeichnung nach Art. 50 nötig",
+        ):
+            self.assertIn(phrase, text)
+        self.assertNotIn("Deepfakes, direkte KI-Interaktion, Verträge und interne Regeln separat prüfen.", text)
+        self.assertNotIn("Bei `regelmäßig nicht erforderlich` schließe ab", text)
+
+    def test_media_references_are_routed_separately(self) -> None:
+        text = (SKILL_DIR / "SKILL.md").read_text(encoding="utf-8")
+        icon_rule = next(line for line in text.splitlines() if "Lade die Icon-Auswahl nur" in line)
+        setup_rule = next(line for line in text.splitlines() if "Lade das Bild-Setup nur" in line)
+        self.assertIn("icon-selection.md", icon_rule)
+        self.assertNotIn("image-setup.md", icon_rule)
+        self.assertIn("image-setup.md", setup_rule)
+        self.assertNotIn("icon-selection.md", setup_rule)
+
     def test_mutation_gate_is_explicit_but_not_required_for_advice(self) -> None:
         text = (SKILL_DIR / "SKILL.md").read_text(encoding="utf-8")
         self.assertIn("Nur vor einer tatsächlichen Änderung", text)
         self.assertNotIn("Arbeite immer in zwei getrennten Schritten", text)
-        self.assertIn("überschreibe das Original nicht", text)
+        self.assertIn("Überschreibe das Original nicht", text)
         self.assertIn("keine Rechtsberatung", text)
+
+    def test_legal_boundary_and_responsibility_are_preserved(self) -> None:
+        text = (SKILL_DIR / "SKILL.md").read_text(encoding="utf-8")
+        for phrase in (
+            "keine Rechtsberatung, Compliance-Garantie oder Haftungsfreistellung",
+            "Die Verantwortung für Nutzung und Veröffentlichung bleibt bei der handelnden Person oder Organisation",
+        ):
+            self.assertIn(phrase, text)
 
     def test_human_review_and_editorial_control_are_alternatives(self) -> None:
         text = (SKILL_DIR / "references" / "eu-baseline.md").read_text(encoding="utf-8")
