@@ -47,8 +47,9 @@ Eine reine Zwischenfrage braucht keinen Abschluss-Block. Eine fertige Arbeitsant
 4. Setze `**Gebaut**` mit mindestens einem fett begonnenen Aufzählungspunkt. Bei reiner Prüfung oder Entscheidung darf der erste Begriff auch `Geprüft` oder `Entschieden` heißen; die Überschrift bleibt `Gebaut`.
 5. Setze `**Stand**` als sichtbare Todo-Liste über den gesamten laufenden Arbeitsauftrag:
    - `- [x]` für erledigt;
-   - `- [>]` für gerade aktiv, falls noch eine echte Sperre besteht;
+   - `- [ ] **AKTIV/BLOCKIERT:** ...` für den gerade aktiven Schritt bei einer echten Sperre;
    - `- [ ]` für den nächsten oder späteren offenen Schritt.
+   Verwende ausschließlich die portablen Markdown-Zustände `[x]` und `[ ]`; Sonderformen wie `[>]` sind keine verlässlich sichtbaren Checkboxen.
 6. Setze `**Deine Entscheidung**` als letzte inhaltliche Zone.
    - Ist eine Entscheidung nötig: nummerierte Frage, darunter `Empfehlung: ...` mit einem Satz Begründung.
    - Ist nichts offen: exakt `Nichts mehr zu tun.`

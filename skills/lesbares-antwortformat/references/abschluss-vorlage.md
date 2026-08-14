@@ -47,7 +47,7 @@ Nichts mehr zu tun.
 
 **Stand**
 - [x] <erledigter Schritt>
-- [>] **<blockierter nächster Schritt>** – wartet auf <konkrete Entscheidung oder Freigabe>
+- [ ] **AKTIV/BLOCKIERT: <nächster Schritt>** – wartet auf <konkrete Entscheidung oder Freigabe>
 - [ ] <späterer Schritt, der davon abhängt>
 
 **Deine Entscheidung**

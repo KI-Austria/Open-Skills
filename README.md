@@ -50,7 +50,7 @@ $bild-entwickeln Entwickle mit mir ein Bild für diese Idee.
 
 Die Installation über `npx skills` verwendet ein unabhängiges Drittanbieter-Werkzeug. Alternativ kann der jeweilige Ordner unter `skills/` manuell in das Skill-Verzeichnis des verwendeten Agenten kopiert werden.
 
-## So arbeitet der Skill
+## So arbeitet Kennzeichnungspflicht
 
 1. Er nutzt zuerst den Schnellpfad: Standardbearbeitung, berufliche Einzelkorrespondenz und interne Kommunikation werden nicht wie öffentliche Publikationen behandelt.
 2. Er bestimmt Anbieter bzw. Betreiber, Inhalt, Zielgruppe und menschliche Kontrolle und stellt nur bei entscheidenden Lücken kurze Rückfragen.

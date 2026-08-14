@@ -37,6 +37,9 @@ class LesbaresAntwortformatContractTest(unittest.TestCase):
         ):
             self.assertIn(phrase, self.skill)
 
+    def _final_templates(self) -> list[str]:
+        return re.findall(r"```markdown\n(.*?)\n```", self.template, flags=re.DOTALL)
+
     def test_required_final_zones_and_order_are_contractual(self) -> None:
         for phrase in (
             "# TL;DR",
@@ -48,18 +51,41 @@ class LesbaresAntwortformatContractTest(unittest.TestCase):
         ):
             self.assertIn(phrase, self.skill)
 
-        ordered = [
-            self.template.index("# TL;DR"),
-            self.template.index("**Gebaut**"),
-            self.template.index("**Stand**"),
-            self.template.index("**Deine Entscheidung**"),
-        ]
-        self.assertEqual(ordered, sorted(ordered))
+        templates = self._final_templates()
+        self.assertEqual(len(templates), 2)
+        for output in templates:
+            with self.subTest(output=output[:80]):
+                self.assertEqual(output.count("# TL;DR"), 1)
+                self.assertEqual(output.count("**Gebaut**"), 1)
+                self.assertEqual(output.count("**Stand**"), 1)
+                self.assertEqual(output.count("**Deine Entscheidung**"), 1)
+                ordered = [
+                    output.index("# TL;DR"),
+                    output.index("**Gebaut**"),
+                    output.index("**Stand**"),
+                    output.index("**Deine Entscheidung**"),
+                    output.rindex("**━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━**"),
+                ]
+                self.assertEqual(ordered, sorted(ordered))
+                self.assertEqual(output.count("**Thema:"), 2)
+
+                tldr = output.split("# TL;DR\n", 1)[1].split("\n\n**Gebaut**", 1)[0]
+                tldr_lines = [line for line in tldr.splitlines() if line.strip()]
+                self.assertEqual(len(tldr_lines), 1)
 
     def test_visible_checkbox_states_are_present(self) -> None:
-        for marker in ("- [x]", "- [>]", "- [ ]"):
+        for marker in ("- [x]", "- [ ]"):
             self.assertIn(marker, self.skill)
             self.assertIn(marker, self.template)
+        checkbox_lines = [
+            line for line in self.template.splitlines() if re.match(r"^\s*- \[", line)
+        ]
+        self.assertTrue(checkbox_lines)
+        for line in checkbox_lines:
+            with self.subTest(checkbox=line):
+                self.assertRegex(line, r"^\s*- \[(?:x| )\](?:\s|$)")
+        self.assertIn("AKTIV/BLOCKIERT", self.skill)
+        self.assertIn("AKTIV/BLOCKIERT", self.template)
         self.assertIn("Interne Tool-Todos zählen nicht als sichtbar", self.skill)
 
     def test_completed_and_blocked_templates_cannot_contradict_each_other(self) -> None:
@@ -67,9 +93,10 @@ class LesbaresAntwortformatContractTest(unittest.TestCase):
         self.assertIn("## Variante A: Auftrag vollständig erledigt", completed)
         self.assertIn("Nichts mehr zu tun.", completed)
         self.assertNotIn("- [ ]", completed)
-        self.assertNotIn("- [>]", completed)
-        self.assertIn("- [>]", blocked)
+        self.assertNotIn("AKTIV/BLOCKIERT", completed)
         self.assertIn("- [ ]", blocked)
+        self.assertEqual(blocked.count("- [ ] **AKTIV/BLOCKIERT:"), 1)
+        self.assertNotIn("- [x] **AKTIV/BLOCKIERT:", blocked)
         self.assertIn("Empfehlung:", blocked)
         self.assertNotIn("Nichts mehr zu tun.", blocked)
 
