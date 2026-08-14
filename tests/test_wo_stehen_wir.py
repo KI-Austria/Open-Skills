@@ -6,10 +6,10 @@ import unittest
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SKILL_DIR = ROOT / "skills" / "lesbares-antwortformat"
+SKILL_DIR = ROOT / "skills" / "wo-stehen-wir"
 
 
-class LesbaresAntwortformatContractTest(unittest.TestCase):
+class WoStehenWirContractTest(unittest.TestCase):
     def setUp(self) -> None:
         self.skill = (SKILL_DIR / "SKILL.md").read_text(encoding="utf-8")
         self.template = (SKILL_DIR / "references" / "abschluss-vorlage.md").read_text(
@@ -19,7 +19,7 @@ class LesbaresAntwortformatContractTest(unittest.TestCase):
     def test_frontmatter_and_trigger_are_explicit(self) -> None:
         self.assertTrue(self.skill.startswith("---\n"))
         frontmatter, _ = self.skill[4:].split("\n---\n", 1)
-        self.assertRegex(frontmatter, r"(?m)^name: lesbares-antwortformat$")
+        self.assertRegex(frontmatter, r"(?m)^name: wo-stehen-wir$")
         for phrase in (
             "sichtbarer Todo-Liste mit Checkboxen",
             "getan, gebaut, geprüft oder entschieden",

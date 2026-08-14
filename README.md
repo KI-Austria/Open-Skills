@@ -28,12 +28,12 @@ Der Skill prüft berufliche Texte und Medien vor einer Veröffentlichung nach Ar
 npx skills add KI-Austria/Open-Skills --skill kennzeichnungspflicht
 ```
 
-### Lesbares Antwortformat
+### Wo stehen wir?
 
-Der Skill strukturiert operative KI-Antworten mit einem stabilen Themenrahmen, genau einem TL;DR-Satz, einer sichtbaren Todo-Liste mit Häkchen und einer klaren Entscheidungszone. Während einer laufenden Werkzeugkette verhindert er künstliche Zwischenabschlüsse; den vollständigen Abschluss-Block setzt er erst bei erledigter Arbeit oder einer echten Nutzersperre.
+Der Skill zeigt bei längeren Aufgaben, wo Mensch und KI gemeinsam stehen: mit einem stabilen Themenrahmen, genau einem TL;DR-Satz, einer sichtbaren Todo-Liste mit Häkchen und einer klaren Entscheidungszone. Während einer laufenden Werkzeugkette verhindert er künstliche Zwischenabschlüsse; den vollständigen Abschluss-Block setzt er erst bei erledigter Arbeit oder einer echten Nutzersperre.
 
 ```bash
-npx skills add KI-Austria/Open-Skills --skill lesbares-antwortformat
+npx skills add KI-Austria/Open-Skills --skill wo-stehen-wir
 ```
 
 ### Denkwerkzeug

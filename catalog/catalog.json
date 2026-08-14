@@ -52,19 +52,19 @@
     },
     {
       "schema_version": 1,
-      "slug": "lesbares-antwortformat",
+      "slug": "wo-stehen-wir",
       "order": 40,
-      "title": "Lesbares Antwortformat",
+      "title": "Wo stehen wir?",
       "subtitle": "Macht laufende KI-Arbeit auf einen Blick steuerbar.",
-      "description": "Strukturiert operative KI-Antworten mit einem klaren Überblick, sichtbaren Arbeitsschritten und einer eindeutigen Entscheidungszone.",
-      "preview": "Der Skill hält Thema, Fortschritt und offene Entscheidungen auch bei längeren Aufgaben sichtbar. Er zeigt einen vollständigen Abschluss erst dann, wenn die Arbeit erledigt ist oder wirklich eine Entscheidung fehlt.",
+      "description": "Zeigt in operativen KI-Antworten, was erledigt ist, was offen bleibt und welche Entscheidung als Nächstes gebraucht wird.",
+      "preview": "Der Skill hält bei längeren Aufgaben sichtbar, wo Mensch und KI gemeinsam stehen. Einen vollständigen Abschluss zeigt er erst, wenn die Arbeit erledigt ist oder wirklich eine Entscheidung fehlt.",
       "steps": [
         "Thema und nächsten Arbeitsschritt sichtbar halten",
         "Erledigte und offene Punkte eindeutig markieren",
         "Mit Ergebnis oder echter Entscheidungsfrage abschließen"
       ],
-      "task": "Strukturiere diese Aufgabe so, dass ich Fortschritt und Entscheidungen sofort sehe.",
-      "answer": "Ich halte den Arbeitsstand während der Aufgabe lesbar: mit einem klaren Themenrahmen, sichtbaren Schritten und genau der Entscheidung, die als Nächstes gebraucht wird. Einen Abschluss zeige ich erst, wenn die Arbeit tatsächlich erledigt ist."
+      "task": "Zeige mir bei dieser Aufgabe klar, wo wir stehen und ob du eine Entscheidung von mir brauchst.",
+      "answer": "Ich halte während der Aufgabe sichtbar, was bereits erledigt ist, was offen bleibt und welche Entscheidung als Nächstes gebraucht wird. Einen Abschluss zeige ich erst, wenn die Arbeit tatsächlich erledigt ist."
     },
     {
       "schema_version": 1,
