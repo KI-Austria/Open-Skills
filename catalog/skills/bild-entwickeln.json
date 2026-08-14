@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "slug": "bild-entwickeln",
+  "order": 20,
+  "title": "Bild entwickeln",
+  "subtitle": "Macht aus einer ersten Idee ein fertiges Bild.",
+  "description": "Klärt eine Bildidee im Gespräch und entwickelt daraus ein passendes Briefing, einen Bildprompt und das fertige Bild.",
+  "preview": "Der Skill fragt immer nur nach der nächsten Entscheidung, die das Bild sichtbar verändert. Sobald Motiv, Wirkung und Bildsprache klar sind, erstellt er das Briefing, den Prompt und mit einem verfügbaren Bildwerkzeug auch das fertige Bild.",
+  "steps": [
+    "Idee, Einsatz und gewünschte Wirkung verstehen",
+    "Motiv und visuelle Richtung festlegen",
+    "Bildbriefing, Prompt und fertiges Bild erstellen"
+  ],
+  "task": "Entwickle mit mir ein Bild aus dieser ersten Idee.",
+  "answer": "Ich kläre mit dir Schritt für Schritt, was das Bild zeigen und bewirken soll. Dafür stelle ich immer nur die nächste entscheidende Frage. Sobald die Richtung klar ist, erstelle ich das Bildbriefing, den Prompt und das fertige Bild."
+}
