@@ -24,6 +24,12 @@ class WoStehenWirContractTest(unittest.TestCase):
             "sichtbarer Todo-Liste mit Checkboxen",
             "getan, gebaut, geprüft oder entschieden",
             "sichtbare Todos",
+            "Wo stehen wir?",
+            "Wo sind wir?",
+            "Wo stehn wir?",
+            "Was ist erledigt?",
+            "Was fehlt noch?",
+            "Wie geht es weiter?",
         ):
             self.assertIn(phrase, frontmatter)
 

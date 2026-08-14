@@ -1,6 +1,6 @@
 ---
 name: wo-stehen-wir
-description: Strukturiere operative Antworten lesbar mit stabilem Themenrahmen, genau einem TL;DR-Satz, sichtbarer Todo-Liste mit Checkboxen und einer klaren Entscheidungszone. Verwende den Skill, wenn Arbeit getan, gebaut, geprüft oder entschieden wird, bei mehrschrittigen Aufgaben, Statuskommunikation, Abschlussberichten oder wenn der User sichtbare Todos, Häkchen, einen Abschluss-Block oder lesbare Fortschrittsanzeigen verlangt.
+description: Strukturiere operative Antworten lesbar mit stabilem Themenrahmen, genau einem TL;DR-Satz, sichtbarer Todo-Liste mit Checkboxen und einer klaren Entscheidungszone. Verwende den Skill, wenn Arbeit getan, gebaut, geprüft oder entschieden wird, bei mehrschrittigen Aufgaben, Statuskommunikation, Abschlussberichten oder wenn der User sichtbare Todos, Häkchen, einen Abschluss-Block oder lesbare Fortschrittsanzeigen verlangt. Verwende ihn außerdem bei Fragen wie „Wo stehen wir?“, „Wo sind wir?“, „Wo stehn wir?“, „Was ist erledigt?“, „Was fehlt noch?“ oder „Wie geht es weiter?“.
 license: MIT
 metadata:
   hermes:
