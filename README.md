@@ -36,6 +36,14 @@ Der Skill strukturiert operative KI-Antworten mit einem stabilen Themenrahmen, g
 npx skills add KI-Austria/Open-Skills --skill lesbares-antwortformat
 ```
 
+### Denkwerkzeug
+
+Der Skill arbeitet eine Entscheidung oder Idee in einem von vier Denkmodi durch: einen Plan von Grundprinzipien aus neu bauen, die stärkste Gegenposition und ein Premortem formulieren, Optionen entlang eines offen benannten Kriteriums vergleichen oder eine Systemebene herauszoomen. Er nennt den gewählten Modus, trennt Fakten von Annahmen und endet mit einem konkreten nächsten Schritt statt mit einer generischen Pro-und-Contra-Liste.
+
+```bash
+npx skills add KI-Austria/Open-Skills --skill denkwerkzeug
+```
+
 Danach den jeweiligen Skill im Agenten aufrufen, zum Beispiel:
 
 ```text

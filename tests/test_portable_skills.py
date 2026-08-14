@@ -11,6 +11,7 @@ SKILLS = (
     "text-entwickeln",
     "kennzeichnungspflicht",
     "lesbares-antwortformat",
+    "denkwerkzeug",
 )
 TEXT_SUFFIXES = {".md", ".py", ".txt", ".yaml", ".yml"}
 TEXT_FILENAMES = {"LICENSE"}

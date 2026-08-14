@@ -1,0 +1,6 @@
+interface:
+  display_name: "Denkwerkzeug"
+  short_description: "Entscheidungen und Ideen in vier Denkmodi durcharbeiten"
+  default_prompt: "Nutze $denkwerkzeug, um diese Entscheidung im passenden Denkmodus durchzuarbeiten."
+policy:
+  allow_implicit_invocation: true
