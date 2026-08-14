@@ -14,7 +14,7 @@ metadata:
 
 Mache sichtbar, wo Mensch und KI in einer laufenden Aufgabe gemeinsam stehen. Der User sieht, was erledigt ist, was als Nächstes passiert und ob eine echte Entscheidung fehlt. Interne Tool-Todos zählen nicht als sichtbar: Der Stand muss im Chat mit Markdown-Checkboxen stehen.
 
-Nutze [references/abschluss-vorlage.md](references/abschluss-vorlage.md) als inhaltlichen Leitfaden, nicht als starres Layout.
+Nutze [references/abschluss-vorlage.md](references/abschluss-vorlage.md) als inhaltlichen Leitfaden. Der dort gezeigte Themenrahmen ist verbindlich; die Darstellung der Inhaltszonen bleibt flexibel.
 
 ## Während der Arbeit
 
@@ -43,7 +43,7 @@ Schließe die Antwort als visuell klar erkennbaren Ergebnisblock ab. Der Block m
 
 Der Ergebnisblock enthält in dieser Reihenfolge:
 
-1. einen stabilen, kurzen Themennamen;
+1. einen Themenkopf aus nativen Markdown-Trennlinien, `**THEMA**` und einem stabilen, kurzen Themennamen als Überschrift;
 2. eine TL;DR-Kurzfassung mit **genau einem Satz**; sichtbar darf sie `TL;DR`, `Kurz gesagt` oder sinngemäß heißen;
 3. Ergebnis, Herleitung und Belege in kurzen Absätzen oder Aufzählungen;
 4. einen sichtbaren Stand über den gesamten laufenden Arbeitsauftrag:
@@ -55,7 +55,9 @@ Der Ergebnisblock enthält in dieser Reihenfolge:
    - Ist eine Entscheidung nötig: nummerierte Frage, darunter `Empfehlung: ...` mit einem Satz Begründung.
    - Ist nichts offen: exakt `Nichts mehr zu tun.`
 
-Die Bezeichnungen und die konkrete visuelle Darstellung dürfen sich an Aufgabe und Oberfläche anpassen. Nutze keine langen Unicode-Balken und wiederhole den Themennamen nicht dekorativ am Ende.
+Wiederhole denselben Themenkopf nach der Entscheidungszone am Ende der Antwort. Nach diesem zweiten Themenkopf kommt nichts mehr. Verwende für beide Rahmen nur native Markdown-Trennlinien aus `---`; keine langen Unicode-Balken, HTML-Tricks oder festen Linienlängen.
+
+Die Bezeichnungen und die konkrete visuelle Darstellung der Inhaltszonen dürfen sich an Aufgabe und Oberfläche anpassen.
 
 ## Kontinuität
 
@@ -78,7 +80,9 @@ Die Bezeichnungen und die konkrete visuelle Darstellung dürfen sich an Aufgabe 
 
 - der Auftrag abgeschlossen oder ehrlich blockiert ist;
 - der Ergebnisblock beim Überfliegen sofort auffindbar ist;
+- am Anfang und Ende derselbe Themenkopf mit nativen Markdown-Trennlinien steht;
 - die TL;DR-Kurzfassung genau einen Satz enthält;
 - `Stand` mindestens eine sichtbare Markdown-Checkbox enthält;
 - Erledigtes und Offenes wahrheitsgemäß markiert sind;
-- die Entscheidungszone der letzte inhaltliche Teil ist.
+- die Entscheidungszone der letzte inhaltliche Teil ist;
+- nach dem zweiten Themenkopf nichts mehr folgt.

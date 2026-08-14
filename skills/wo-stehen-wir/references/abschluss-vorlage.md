@@ -1,11 +1,17 @@
 # Abschluss-Leitfaden
 
-Die Beispiele zeigen die notwendigen Inhaltszonen. Sie sind kein starres Layout. Passe Überschriften und visuelle Trennung an Aufgabe und Oberfläche an.
+Die Beispiele zeigen die notwendigen Inhaltszonen. Der Themenrahmen am Anfang und Ende ist verbindlich; die Überschriften innerhalb der Antwort dürfen sich an Aufgabe und Oberfläche anpassen.
 
 ## Variante A: Auftrag vollständig erledigt
 
 ```markdown
+---
+
+**THEMA**
+
 ### <stabiler Themenname>
+
+---
 
 **Kurz gesagt:** <Genau ein Satz: Was ist jetzt anders.>
 
@@ -19,12 +25,26 @@ Die Beispiele zeigen die notwendigen Inhaltszonen. Sie sind kein starres Layout.
 
 **Deine Entscheidung**
 Nichts mehr zu tun.
+
+---
+
+**THEMA**
+
+### <derselbe stabile Themenname>
+
+---
 ```
 
 ## Variante B: Echte Nutzersperre
 
 ```markdown
+---
+
+**THEMA**
+
 ### <stabiler Themenname>
+
+---
 
 **Kurz gesagt:** <Genau ein Satz: Was ist fertig und wodurch der Rest blockiert ist.>
 
@@ -39,6 +59,14 @@ Nichts mehr zu tun.
 **Deine Entscheidung**
 1. **<Die eine echte offene Frage?>**<br>
    Empfehlung: <X. Grund in einem Satz.>
+
+---
+
+**THEMA**
+
+### <derselbe stabile Themenname>
+
+---
 ```
 
 ## Nicht verwenden
@@ -47,4 +75,4 @@ Nichts mehr zu tun.
 - nicht nach jedem kleinen Teilschritt;
 - nicht für eine reine Zwischenfrage;
 - nicht als Vorwand, einen klaren nächsten Schritt an den User zurückzugeben.
-- nicht mit langen Unicode-Balken oder einem dekorativ wiederholten Themennamen.
+- nicht mit langen Unicode-Balken, HTML-Tricks oder festen Linienlängen.

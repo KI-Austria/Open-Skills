@@ -65,11 +65,15 @@ class WoStehenWirContractTest(unittest.TestCase):
                 self.assertEqual(output.count("**Ergebnis**"), 1)
                 self.assertEqual(output.count("**Stand**"), 1)
                 self.assertEqual(output.count("**Deine Entscheidung**"), 1)
+                self.assertEqual(output.count("**THEMA**"), 2)
+                self.assertEqual(output.count("---"), 4)
                 ordered = [
+                    output.index("**THEMA**"),
                     output.index("**Kurz gesagt:**"),
                     output.index("**Ergebnis**"),
                     output.index("**Stand**"),
                     output.index("**Deine Entscheidung**"),
+                    output.rindex("**THEMA**"),
                 ]
                 self.assertEqual(ordered, sorted(ordered))
                 self.assertNotIn("━━━━━━━━", output)
@@ -104,9 +108,10 @@ class WoStehenWirContractTest(unittest.TestCase):
 
     def test_visual_frame_stays_adaptive(self) -> None:
         self.assertIn("### <stabiler Themenname>", self.template)
-        self.assertIn("kein starres Layout", self.template)
-        self.assertIn("keine langen Unicode-Balken", self.skill)
-        self.assertIn("wiederhole den Themennamen nicht dekorativ am Ende", self.skill)
+        self.assertIn("### <derselbe stabile Themenname>", self.template)
+        self.assertIn("Themenrahmen am Anfang und Ende ist verbindlich", self.template)
+        self.assertIn("native Markdown-Trennlinien aus `---`", self.skill)
+        self.assertIn("keine langen Unicode-Balken, HTML-Tricks oder festen Linienlängen", self.skill)
         self.assertIn("genau einem Satz", self.skill)
 
     def test_decision_zone_does_not_invent_work(self) -> None:
