@@ -18,3 +18,9 @@ Website-Texte, Teaser, Vorschau-Schritte, Website-URLs und Installationswerbung 
 - `python scripts/build_catalog.py --check` und `python -m pytest -q` müssen bestehen.
 
 Ein Pull Request darf nicht als fertig gelten, wenn der Katalog fehlt oder `catalog/catalog.json` nicht dem aktuellen Stand entspricht.
+
+## Benennung
+
+- Der Name beschreibt vorzugsweise das praktische Ergebnis für den Menschen, nicht die interne Format- oder Implementierungslogik.
+- Skills für gemeinsame Orientierung, Reflexion und Entscheidung dürfen als natürliche **Wir-Frage** benannt werden, zum Beispiel `wo-stehen-wir`. Die Frage bleibt im sichtbaren Titel erhalten; der Slug verwendet Kleinbuchstaben, ASCII und Bindestriche.
+- Fachliche Skills wie `kennzeichnungspflicht` werden nicht in dieses Muster gezwungen. Eine Namensfamilie ist nur dann sinnvoll, wenn die Frage den tatsächlichen Zweck des Skills präzise beschreibt.

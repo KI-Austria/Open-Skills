@@ -1,6 +1,0 @@
-interface:
-  display_name: "Lesbares Antwortformat"
-  short_description: "Fortschritt mit sichtbaren Todos klar abschließen"
-  default_prompt: "Nutze $lesbares-antwortformat für alle fertigen operativen Antworten in diesem Arbeitsstrang."
-policy:
-  allow_implicit_invocation: true

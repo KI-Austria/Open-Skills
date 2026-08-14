@@ -1,8 +1,6 @@
 ---
-name: lesbares-antwortformat
+name: wo-stehen-wir
 description: Strukturiere operative Antworten lesbar mit stabilem Themenrahmen, genau einem TL;DR-Satz, sichtbarer Todo-Liste mit Checkboxen und einer klaren Entscheidungszone. Verwende den Skill, wenn Arbeit getan, gebaut, geprüft oder entschieden wird, bei mehrschrittigen Aufgaben, Statuskommunikation, Abschlussberichten oder wenn der User sichtbare Todos, Häkchen, einen Abschluss-Block oder lesbare Fortschrittsanzeigen verlangt.
-version: 1.0.0
-author: KI Austria
 license: MIT
 metadata:
   hermes:
@@ -10,11 +8,11 @@ metadata:
     related_skills: []
 ---
 
-# Lesbares Antwortformat
+# Wo stehen wir?
 
 ## Ziel
 
-Mache Arbeitskommunikation auf einen Blick steuerbar. Der User sieht, was erledigt ist, was als Nächstes passiert und ob eine echte Entscheidung fehlt. Interne Tool-Todos zählen nicht als sichtbar: Der Stand muss im Chat mit Markdown-Checkboxen stehen.
+Mache sichtbar, wo Mensch und KI in einer laufenden Aufgabe gemeinsam stehen. Der User sieht, was erledigt ist, was als Nächstes passiert und ob eine echte Entscheidung fehlt. Interne Tool-Todos zählen nicht als sichtbar: Der Stand muss im Chat mit Markdown-Checkboxen stehen.
 
 Lade für das exakte Endformat [references/abschluss-vorlage.md](references/abschluss-vorlage.md).
 

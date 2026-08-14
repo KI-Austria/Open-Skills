@@ -10,7 +10,7 @@ SKILLS = (
     "bild-entwickeln",
     "text-entwickeln",
     "kennzeichnungspflicht",
-    "lesbares-antwortformat",
+    "wo-stehen-wir",
     "denkwerkzeug",
 )
 TEXT_SUFFIXES = {".md", ".py", ".txt", ".yaml", ".yml"}

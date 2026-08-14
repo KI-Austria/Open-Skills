@@ -1,0 +1,6 @@
+interface:
+  display_name: "Wo stehen wir?"
+  short_description: "Arbeitsstand und Entscheidungen sichtbar halten"
+  default_prompt: "Nutze $wo-stehen-wir, um bei dieser Aufgabe Fortschritt, offene Schritte und nötige Entscheidungen sichtbar zu halten."
+policy:
+  allow_implicit_invocation: true
