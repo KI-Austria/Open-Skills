@@ -1,20 +1,15 @@
-# Abschluss-Vorlage
+# Abschluss-Leitfaden
 
-Verwende eine der beiden vollständigen Varianten nur am echten Ende des Auftrags oder bei einer echten, vom User zu lösenden Sperre. Vermische die Varianten nicht.
+Die Beispiele zeigen die notwendigen Inhaltszonen. Sie sind kein starres Layout. Passe Überschriften und visuelle Trennung an Aufgabe und Oberfläche an.
 
 ## Variante A: Auftrag vollständig erledigt
 
 ```markdown
-**━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━**<br>
-**Thema: <stabiler Themenname>**<br>
-**━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━**
+### <stabiler Themenname>
 
-<Ergebnis, Erklärung, Herleitung und Belege in lesbaren Absätzen.>
+**Kurz gesagt:** <Genau ein Satz: Was ist jetzt anders.>
 
-# TL;DR
-<Genau ein Satz: Was ist jetzt anders.>
-
-**Gebaut**
+**Ergebnis**
 - **<Stichwort>** – <in einem Halbsatz, was es ist>
 
 **Stand**
@@ -24,25 +19,16 @@ Verwende eine der beiden vollständigen Varianten nur am echten Ende des Auftrag
 
 **Deine Entscheidung**
 Nichts mehr zu tun.
-
-**━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━**<br>
-**Thema: <derselbe stabile Themenname>**<br>
-**━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━**
 ```
 
 ## Variante B: Echte Nutzersperre
 
 ```markdown
-**━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━**<br>
-**Thema: <stabiler Themenname>**<br>
-**━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━**
+### <stabiler Themenname>
 
-<Ergebnis, Erklärung, Herleitung und konkrete Sperre in lesbaren Absätzen.>
+**Kurz gesagt:** <Genau ein Satz: Was ist fertig und wodurch der Rest blockiert ist.>
 
-# TL;DR
-<Genau ein Satz: Was ist fertig und wodurch der Rest blockiert ist.>
-
-**Gebaut**
+**Ergebnis**
 - **<Stichwort>** – <in einem Halbsatz, was bereits fertig ist>
 
 **Stand**
@@ -53,10 +39,6 @@ Nichts mehr zu tun.
 **Deine Entscheidung**
 1. **<Die eine echte offene Frage?>**<br>
    Empfehlung: <X. Grund in einem Satz.>
-
-**━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━**<br>
-**Thema: <derselbe stabile Themenname>**<br>
-**━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━**
 ```
 
 ## Nicht verwenden
@@ -65,3 +47,4 @@ Nichts mehr zu tun.
 - nicht nach jedem kleinen Teilschritt;
 - nicht für eine reine Zwischenfrage;
 - nicht als Vorwand, einen klaren nächsten Schritt an den User zurückzugeben.
+- nicht mit langen Unicode-Balken oder einem dekorativ wiederholten Themennamen.

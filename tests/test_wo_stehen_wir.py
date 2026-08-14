@@ -48,12 +48,12 @@ class WoStehenWirContractTest(unittest.TestCase):
 
     def test_required_final_zones_and_order_are_contractual(self) -> None:
         for phrase in (
-            "# TL;DR",
-            "**Gebaut**",
-            "**Stand**",
-            "**Deine Entscheidung**",
+            "Schließe die Antwort als visuell klar erkennbaren Ergebnisblock ab.",
+            "Der Block muss beim Überfliegen sofort auffindbar sein.",
+            "eine TL;DR-Kurzfassung mit **genau einem Satz**",
+            "einen sichtbaren Stand",
+            "eine Entscheidungszone",
             "Nichts mehr zu tun.",
-            "Nach dem Schlusstrenner kommt nichts mehr.",
         ):
             self.assertIn(phrase, self.skill)
 
@@ -61,23 +61,19 @@ class WoStehenWirContractTest(unittest.TestCase):
         self.assertEqual(len(templates), 2)
         for output in templates:
             with self.subTest(output=output[:80]):
-                self.assertEqual(output.count("# TL;DR"), 1)
-                self.assertEqual(output.count("**Gebaut**"), 1)
+                self.assertEqual(output.count("**Kurz gesagt:**"), 1)
+                self.assertEqual(output.count("**Ergebnis**"), 1)
                 self.assertEqual(output.count("**Stand**"), 1)
                 self.assertEqual(output.count("**Deine Entscheidung**"), 1)
                 ordered = [
-                    output.index("# TL;DR"),
-                    output.index("**Gebaut**"),
+                    output.index("**Kurz gesagt:**"),
+                    output.index("**Ergebnis**"),
                     output.index("**Stand**"),
                     output.index("**Deine Entscheidung**"),
-                    output.rindex("**━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━**"),
                 ]
                 self.assertEqual(ordered, sorted(ordered))
-                self.assertEqual(output.count("**Thema:"), 2)
-
-                tldr = output.split("# TL;DR\n", 1)[1].split("\n\n**Gebaut**", 1)[0]
-                tldr_lines = [line for line in tldr.splitlines() if line.strip()]
-                self.assertEqual(len(tldr_lines), 1)
+                self.assertNotIn("━━━━━━━━", output)
+                self.assertNotIn("**Thema:", output)
 
     def test_visible_checkbox_states_are_present(self) -> None:
         for marker in ("- [x]", "- [ ]"):
@@ -106,11 +102,12 @@ class WoStehenWirContractTest(unittest.TestCase):
         self.assertIn("Empfehlung:", blocked)
         self.assertNotIn("Nichts mehr zu tun.", blocked)
 
-    def test_theme_frame_and_single_sentence_tldr_are_explicit(self) -> None:
-        self.assertIn("Thema: <stabiler Themenname>", self.template)
-        self.assertIn("Thema: <derselbe stabile Themenname>", self.template)
+    def test_visual_frame_stays_adaptive(self) -> None:
+        self.assertIn("### <stabiler Themenname>", self.template)
+        self.assertIn("kein starres Layout", self.template)
+        self.assertIn("keine langen Unicode-Balken", self.skill)
+        self.assertIn("wiederhole den Themennamen nicht dekorativ am Ende", self.skill)
         self.assertIn("genau einem Satz", self.skill)
-        self.assertIn("Anfangs- und Schlussthema identisch", self.skill)
 
     def test_decision_zone_does_not_invent_work(self) -> None:
         for phrase in (

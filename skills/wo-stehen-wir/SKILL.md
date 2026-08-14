@@ -14,7 +14,7 @@ metadata:
 
 Mache sichtbar, wo Mensch und KI in einer laufenden Aufgabe gemeinsam stehen. Der User sieht, was erledigt ist, was als Nächstes passiert und ob eine echte Entscheidung fehlt. Interne Tool-Todos zählen nicht als sichtbar: Der Stand muss im Chat mit Markdown-Checkboxen stehen.
 
-Lade für das exakte Endformat [references/abschluss-vorlage.md](references/abschluss-vorlage.md).
+Nutze [references/abschluss-vorlage.md](references/abschluss-vorlage.md) als inhaltlichen Leitfaden, nicht als starres Layout.
 
 ## Während der Arbeit
 
@@ -39,20 +39,23 @@ Eine reine Zwischenfrage braucht keinen Abschluss-Block. Eine fertige Arbeitsant
 
 ## Verbindlicher Aufbau der fertigen Antwort
 
-1. Beginne mit dem Trenner und `Thema: <Name der Sache>` aus der Vorlage.
-2. Erkläre Ergebnis, Herleitung und Belege lesbar. Nutze kurze Absätze, Aufzählungszeichen und Fettung.
-3. Setze `# TL;DR` mit **genau einem Satz**.
-4. Setze `**Gebaut**` mit mindestens einem fett begonnenen Aufzählungspunkt. Bei reiner Prüfung oder Entscheidung darf der erste Begriff auch `Geprüft` oder `Entschieden` heißen; die Überschrift bleibt `Gebaut`.
-5. Setze `**Stand**` als sichtbare Todo-Liste über den gesamten laufenden Arbeitsauftrag:
+Schließe die Antwort als visuell klar erkennbaren Ergebnisblock ab. Der Block muss beim Überfliegen sofort auffindbar sein.
+
+Der Ergebnisblock enthält in dieser Reihenfolge:
+
+1. einen stabilen, kurzen Themennamen;
+2. eine TL;DR-Kurzfassung mit **genau einem Satz**; sichtbar darf sie `TL;DR`, `Kurz gesagt` oder sinngemäß heißen;
+3. Ergebnis, Herleitung und Belege in kurzen Absätzen oder Aufzählungen;
+4. einen sichtbaren Stand über den gesamten laufenden Arbeitsauftrag:
    - `- [x]` für erledigt;
    - `- [ ] **AKTIV/BLOCKIERT:** ...` für den gerade aktiven Schritt bei einer echten Sperre;
    - `- [ ]` für den nächsten oder späteren offenen Schritt.
    Verwende ausschließlich die portablen Markdown-Zustände `[x]` und `[ ]`; Sonderformen wie `[>]` sind keine verlässlich sichtbaren Checkboxen.
-6. Setze `**Deine Entscheidung**` als letzte inhaltliche Zone.
+5. eine Entscheidungszone als letzten inhaltlichen Teil.
    - Ist eine Entscheidung nötig: nummerierte Frage, darunter `Empfehlung: ...` mit einem Satz Begründung.
    - Ist nichts offen: exakt `Nichts mehr zu tun.`
-7. Schließe mit demselben Trenner und demselben Themennamen wie am Anfang.
-8. Nach dem Schlusstrenner kommt nichts mehr.
+
+Die Bezeichnungen und die konkrete visuelle Darstellung dürfen sich an Aufgabe und Oberfläche anpassen. Nutze keine langen Unicode-Balken und wiederhole den Themennamen nicht dekorativ am Ende.
 
 ## Kontinuität
 
@@ -65,7 +68,7 @@ Eine reine Zwischenfrage braucht keinen Abschluss-Block. Eine fertige Arbeitsant
 
 ## Lesbarkeitsregeln
 
-- Aufzählungszeichen und Fettung sind im Abschluss-Block Pflicht.
+- Aufzählungszeichen und Fettung machen den Abschluss-Block scanbar.
 - Ein Absatz behandelt eine Aussage.
 - Pfade, IDs und Befehle werden nur genannt, wenn sie dem User beim Prüfen oder Weiterarbeiten helfen.
 - Keine Rohdatenwand, kein Toolprotokoll und kein mehrfacher TL;DR.
@@ -74,9 +77,8 @@ Eine reine Zwischenfrage braucht keinen Abschluss-Block. Eine fertige Arbeitsant
 ## Fertig, wenn
 
 - der Auftrag abgeschlossen oder ehrlich blockiert ist;
-- Anfangs- und Schlussthema identisch sind;
-- `# TL;DR` genau einen Satz enthält;
+- der Ergebnisblock beim Überfliegen sofort auffindbar ist;
+- die TL;DR-Kurzfassung genau einen Satz enthält;
 - `Stand` mindestens eine sichtbare Markdown-Checkbox enthält;
 - Erledigtes und Offenes wahrheitsgemäß markiert sind;
-- `Deine Entscheidung` die letzte inhaltliche Zone ist;
-- nach dem Schlusstrenner kein Nachsatz folgt.
+- die Entscheidungszone der letzte inhaltliche Teil ist.
