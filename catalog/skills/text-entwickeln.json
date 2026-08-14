@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "slug": "text-entwickeln",
+  "order": 30,
+  "title": "Text entwickeln",
+  "subtitle": "Führt von der ersten Idee zum fertigen Text.",
+  "description": "Klärt einen Schreibauftrag im Gespräch und liefert danach einen direkt nutzbaren Text mit kompakter Conceptmap und Begründung.",
+  "preview": "Der Skill fragt nur nach Informationen, die den fertigen Text wesentlich verändern. Sobald Aufgabe, Leser, Ziel und Inhalt klar sind, schreibt er den vollständigen Text und macht seine sichtbaren Textentscheidungen nachvollziehbar.",
+  "steps": [
+    "Situation, Leser und gewünschte Wirkung verstehen",
+    "Fehlende Inhalte mit einer Frage pro Schritt klären",
+    "Fertigen Text, Conceptmap und Begründung liefern"
+  ],
+  "task": "Entwickle mit mir einen Text aus dieser ersten Idee.",
+  "answer": "Ich kläre mit dir zuerst Aufgabe, Leser und gewünschte Wirkung. Dabei frage ich immer nur nach der nächsten Information, die den Text wirklich verändert. Sobald alles Wesentliche klar ist, schreibe ich den fertigen Text."
+}

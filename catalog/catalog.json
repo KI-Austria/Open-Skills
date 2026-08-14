@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "generated_from": "catalog/skills/*.json",
+  "skills": [
+    {
+      "schema_version": 1,
+      "slug": "kennzeichnungspflicht",
+      "order": 10,
+      "title": "Kennzeichnungspflicht",
+      "subtitle": "Prüft KI-Inhalte vor der Veröffentlichung.",
+      "description": "Prüft vor der Veröffentlichung, ob und wie KI-generierte Inhalte gekennzeichnet werden müssen.",
+      "preview": "Der Skill prüft vor der Veröffentlichung, ob ein KI-Inhalt gekennzeichnet werden muss. Er empfiehlt den passenden Hinweis und setzt ihn erst nach Ihrer Freigabe ein.",
+      "steps": [
+        "Vorhandenen Kontext auswerten",
+        "Einstufung, Wortlaut und Platzierung empfehlen",
+        "Erst nach ausdrücklicher Freigabe umsetzen"
+      ],
+      "task": "Prüfe dieses Posting vor der Veröffentlichung.",
+      "answer": "Ich prüfe KI-Anteil, Inhalt und Veröffentlichungskontext. Danach bekommst du eine klare Einstufung, den passenden Wortlaut und seine Platzierung. Eingefügt wird erst nach deiner Freigabe."
+    },
+    {
+      "schema_version": 1,
+      "slug": "bild-entwickeln",
+      "order": 20,
+      "title": "Bild entwickeln",
+      "subtitle": "Macht aus einer ersten Idee ein fertiges Bild.",
+      "description": "Klärt eine Bildidee im Gespräch und entwickelt daraus ein passendes Briefing, einen Bildprompt und das fertige Bild.",
+      "preview": "Der Skill fragt immer nur nach der nächsten Entscheidung, die das Bild sichtbar verändert. Sobald Motiv, Wirkung und Bildsprache klar sind, erstellt er das Briefing, den Prompt und mit einem verfügbaren Bildwerkzeug auch das fertige Bild.",
+      "steps": [
+        "Idee, Einsatz und gewünschte Wirkung verstehen",
+        "Motiv und visuelle Richtung festlegen",
+        "Bildbriefing, Prompt und fertiges Bild erstellen"
+      ],
+      "task": "Entwickle mit mir ein Bild aus dieser ersten Idee.",
+      "answer": "Ich kläre mit dir Schritt für Schritt, was das Bild zeigen und bewirken soll. Dafür stelle ich immer nur die nächste entscheidende Frage. Sobald die Richtung klar ist, erstelle ich das Bildbriefing, den Prompt und das fertige Bild."
+    },
+    {
+      "schema_version": 1,
+      "slug": "text-entwickeln",
+      "order": 30,
+      "title": "Text entwickeln",
+      "subtitle": "Führt von der ersten Idee zum fertigen Text.",
+      "description": "Klärt einen Schreibauftrag im Gespräch und liefert danach einen direkt nutzbaren Text mit kompakter Conceptmap und Begründung.",
+      "preview": "Der Skill fragt nur nach Informationen, die den fertigen Text wesentlich verändern. Sobald Aufgabe, Leser, Ziel und Inhalt klar sind, schreibt er den vollständigen Text und macht seine sichtbaren Textentscheidungen nachvollziehbar.",
+      "steps": [
+        "Situation, Leser und gewünschte Wirkung verstehen",
+        "Fehlende Inhalte mit einer Frage pro Schritt klären",
+        "Fertigen Text, Conceptmap und Begründung liefern"
+      ],
+      "task": "Entwickle mit mir einen Text aus dieser ersten Idee.",
+      "answer": "Ich kläre mit dir zuerst Aufgabe, Leser und gewünschte Wirkung. Dabei frage ich immer nur nach der nächsten Information, die den Text wirklich verändert. Sobald alles Wesentliche klar ist, schreibe ich den fertigen Text."
+    },
+    {
+      "schema_version": 1,
+      "slug": "lesbares-antwortformat",
+      "order": 40,
+      "title": "Lesbares Antwortformat",
+      "subtitle": "Macht laufende KI-Arbeit auf einen Blick steuerbar.",
+      "description": "Strukturiert operative KI-Antworten mit einem klaren Überblick, sichtbaren Arbeitsschritten und einer eindeutigen Entscheidungszone.",
+      "preview": "Der Skill hält Thema, Fortschritt und offene Entscheidungen auch bei längeren Aufgaben sichtbar. Er zeigt einen vollständigen Abschluss erst dann, wenn die Arbeit erledigt ist oder wirklich eine Entscheidung fehlt.",
+      "steps": [
+        "Thema und nächsten Arbeitsschritt sichtbar halten",
+        "Erledigte und offene Punkte eindeutig markieren",
+        "Mit Ergebnis oder echter Entscheidungsfrage abschließen"
+      ],
+      "task": "Strukturiere diese Aufgabe so, dass ich Fortschritt und Entscheidungen sofort sehe.",
+      "answer": "Ich halte den Arbeitsstand während der Aufgabe lesbar: mit einem klaren Themenrahmen, sichtbaren Schritten und genau der Entscheidung, die als Nächstes gebraucht wird. Einen Abschluss zeige ich erst, wenn die Arbeit tatsächlich erledigt ist."
+    }
+  ]
+}

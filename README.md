@@ -72,6 +72,12 @@ python3 -m venv .venv
 .venv/bin/python -m pytest -q
 ```
 
+Die Website-Darstellung liegt getrennt vom ausführbaren Skill unter
+`catalog/skills/<slug>.json`. Nach jeder Änderung dort oder an der Liste der
+Skills muss `python scripts/build_catalog.py` ausgeführt werden. Die Tests
+blockieren einen Release, wenn ein Skill keinen passenden Katalogeintrag hat
+oder der erzeugte Gesamtkatalog veraltet ist.
+
 Die Tests prüfen Skill-Verträge, portable Paketpfade, das sichtbare Antwort- und Todo-Format, CLI-Hilfe, Originalschutz, atomare Ausgabe in vertrauenswürdige Zielverzeichnisse, Ablehnung gemeinsam beschreibbarer Zielverzeichnisse, Bild- und Dimensionslimits, Bildformate, Mindestlesbarkeit, Transparenz, EXIF-Ausrichtung sowie standardmäßige Entfernung und explizite, begrenzte Übernahme von Metadaten. Die fachlichen Abnahmefälle stehen in `tests/behavior-cases.md`.
 
 ## Hinweise
