@@ -6,7 +6,12 @@ import unittest
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SKILLS = ("bild-entwickeln", "text-entwickeln", "kennzeichnungspflicht")
+SKILLS = (
+    "bild-entwickeln",
+    "text-entwickeln",
+    "kennzeichnungspflicht",
+    "lesbares-antwortformat",
+)
 TEXT_SUFFIXES = {".md", ".py", ".txt", ".yaml", ".yml"}
 TEXT_FILENAMES = {"LICENSE"}
 

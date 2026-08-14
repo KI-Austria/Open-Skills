@@ -28,6 +28,14 @@ Der Skill prüft berufliche Texte und Medien vor einer Veröffentlichung nach Ar
 npx skills add KI-Austria/Open-Skills --skill kennzeichnungspflicht
 ```
 
+### Lesbares Antwortformat
+
+Der Skill strukturiert operative KI-Antworten mit einem stabilen Themenrahmen, genau einem TL;DR-Satz, einer sichtbaren Todo-Liste mit Häkchen und einer klaren Entscheidungszone. Während einer laufenden Werkzeugkette verhindert er künstliche Zwischenabschlüsse; den vollständigen Abschluss-Block setzt er erst bei erledigter Arbeit oder einer echten Nutzersperre.
+
+```bash
+npx skills add KI-Austria/Open-Skills --skill lesbares-antwortformat
+```
+
 Danach den jeweiligen Skill im Agenten aufrufen, zum Beispiel:
 
 ```text
@@ -56,7 +64,7 @@ python3 -m venv .venv
 .venv/bin/python -m pytest -q
 ```
 
-Die Tests prüfen Skill-Verträge, portable Paketpfade, CLI-Hilfe, Originalschutz, atomare Ausgabe in vertrauenswürdige Zielverzeichnisse, Ablehnung gemeinsam beschreibbarer Zielverzeichnisse, Bild- und Dimensionslimits, Bildformate, Mindestlesbarkeit, Transparenz, EXIF-Ausrichtung sowie standardmäßige Entfernung und explizite, begrenzte Übernahme von Metadaten. Die fachlichen Abnahmefälle stehen in `tests/behavior-cases.md`.
+Die Tests prüfen Skill-Verträge, portable Paketpfade, das sichtbare Antwort- und Todo-Format, CLI-Hilfe, Originalschutz, atomare Ausgabe in vertrauenswürdige Zielverzeichnisse, Ablehnung gemeinsam beschreibbarer Zielverzeichnisse, Bild- und Dimensionslimits, Bildformate, Mindestlesbarkeit, Transparenz, EXIF-Ausrichtung sowie standardmäßige Entfernung und explizite, begrenzte Übernahme von Metadaten. Die fachlichen Abnahmefälle stehen in `tests/behavior-cases.md`.
 
 ## Hinweise
 
