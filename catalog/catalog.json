@@ -65,6 +65,22 @@
       ],
       "task": "Strukturiere diese Aufgabe so, dass ich Fortschritt und Entscheidungen sofort sehe.",
       "answer": "Ich halte den Arbeitsstand während der Aufgabe lesbar: mit einem klaren Themenrahmen, sichtbaren Schritten und genau der Entscheidung, die als Nächstes gebraucht wird. Einen Abschluss zeige ich erst, wenn die Arbeit tatsächlich erledigt ist."
+    },
+    {
+      "schema_version": 1,
+      "slug": "denkwerkzeug",
+      "order": 50,
+      "title": "Denkwerkzeug",
+      "subtitle": "Prüft eine Idee, statt sie zu bestätigen.",
+      "description": "Bearbeitet Entscheidungen und Ideen in vier Denkmodi und liefert eine belastbare Rekonstruktion statt einer generischen Pro-und-Contra-Liste.",
+      "preview": "Der Skill wählt einen von vier Denkmodi und sagt Ihnen, welchen. Er baut einen Plan von Grund auf neu, sucht die stärkste Gegenposition, vergleicht Optionen oder zeigt das größere Problem dahinter. Am Ende steht ein nächster Schritt, keine Pro-und-Contra-Liste.",
+      "steps": [
+        "Passenden Denkmodus wählen und benennen",
+        "Fakten, Annahmen und Meinungen trennen",
+        "Einen konkreten nächsten Schritt liefern"
+      ],
+      "task": "Ich will unser Preismodell ändern. Denk das mit mir durch.",
+      "answer": "Ich nehme dafür den Modus GEGEN und suche die stärkste Position gegen deine Idee. Nicht um sie zu kippen, sondern um zu sehen, ob sie hält. Dabei trenne ich, was belegt ist, von dem, was du annimmst. Am Ende bekommst du einen konkreten nächsten Schritt."
     }
   ]
 }
