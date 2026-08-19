@@ -33,6 +33,15 @@ def test_catalog_is_deterministic_and_current() -> None:
     assert [entry["slug"] for entry in payload["skills"]][0] == "kennzeichnungspflicht"
 
 
+def test_kennzeichnungspflicht_catalog_exposes_legal_boundary() -> None:
+    manifest = json.loads((ROOT / "catalog" / "skills" / "kennzeichnungspflicht.json").read_text(encoding="utf-8"))
+    public_copy = " ".join(str(value) for value in manifest.values())
+    assert "keine Rechtsberatung" in public_copy
+    assert "Compliance-Garantie" in public_copy
+    assert "Verantwortung für Einordnung und Veröffentlichung" in public_copy
+    assert "Bei unklaren Fällen ändere ich nichts" in public_copy
+
+
 def test_runtime_packages_contain_no_website_manifests() -> None:
     forbidden_names = {"website.json", "catalog.json", "homepage.json"}
     for path in (ROOT / "skills").rglob("*"):

@@ -77,9 +77,21 @@ class SkillContractTest(unittest.TestCase):
         text = (SKILL_DIR / "SKILL.md").read_text(encoding="utf-8")
         for phrase in (
             "keine Rechtsberatung, Compliance-Garantie oder Haftungsfreistellung",
-            "Die Verantwortung für Nutzung und Veröffentlichung bleibt bei der handelnden Person oder Organisation",
+            "Nicht allein verwenden",
+            "Verantwortung für Einordnung, Nutzung und Veröffentlichung bleibt bei der handelnden Person oder Organisation",
+            "Bei `unklar` keine Änderung durchführen, auch nicht mit vorab erteilter Mutationsfreigabe",
+            "fachkundige oder rechtliche Prüfung empfehlen",
         ):
             self.assertIn(phrase, text)
+
+    def test_unclear_result_overrides_prior_mutation_approval(self) -> None:
+        text = (SKILL_DIR / "SKILL.md").read_text(encoding="utf-8")
+        self.assertIn(
+            "Bei `unklar` keine Änderung durchführen, auch nicht mit vorab erteilter Mutationsfreigabe",
+            text,
+        )
+        self.assertIn("„prüfe und kennzeichne“", text)
+        self.assertNotIn("Bei `unklar` keine Freigabe ableiten", text)
 
     def test_human_review_and_editorial_control_are_alternatives(self) -> None:
         text = (SKILL_DIR / "references" / "eu-baseline.md").read_text(encoding="utf-8")

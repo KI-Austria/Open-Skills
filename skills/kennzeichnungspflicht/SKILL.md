@@ -12,9 +12,9 @@ metadata:
 
 # Kennzeichnungspflicht
 
-## Ziel und Grenze
+## Wichtiger Hinweis: Ziel und Grenze
 
-Liefere eine praktische Vorprüfung – keine Rechtsberatung, Compliance-Garantie oder Haftungsfreistellung. Trenne **erforderlich**, **vorsorglich empfohlen**, **regelmäßig nicht erforderlich** und **unklar**. Die Verantwortung für Nutzung und Veröffentlichung bleibt bei der handelnden Person oder Organisation. Nutze bekannte Tatsachen; kein Rechtsinterview.
+Praktische Vorprüfung – keine Rechtsberatung, Compliance-Garantie oder Haftungsfreistellung. Nicht allein verwenden. Bei `unklar` keine Änderung durchführen, auch nicht mit vorab erteilter Mutationsfreigabe; fachkundige oder rechtliche Prüfung empfehlen. Verantwortung für Einordnung, Nutzung und Veröffentlichung bleibt bei der handelnden Person oder Organisation. Nutze bekannte Tatsachen; kein Rechtsinterview.
 
 ## Schnellpfad für Wissensarbeit – zuerst und ohne Referenzdatei
 
