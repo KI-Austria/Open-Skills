@@ -3,14 +3,14 @@
   "slug": "kennzeichnungspflicht",
   "order": 10,
   "title": "Kennzeichnungspflicht",
-  "subtitle": "Prüft KI-Inhalte vor der Veröffentlichung.",
-  "description": "Prüft vor der Veröffentlichung, ob und wie KI-generierte Inhalte gekennzeichnet werden müssen.",
-  "preview": "Der Skill prüft vor der Veröffentlichung, ob ein KI-Inhalt gekennzeichnet werden muss. Er empfiehlt den passenden Hinweis und setzt ihn erst nach Ihrer Freigabe ein.",
+  "subtitle": "Praktische Vorprüfung – keine Rechtsberatung.",
+  "description": "Prüft vor der Veröffentlichung, ob und wie KI-generierte Inhalte gekennzeichnet werden sollten. Keine Rechtsberatung oder Compliance-Garantie.",
+  "preview": "Der Skill liefert eine praktische Vorprüfung, empfiehlt Hinweis und Platzierung und setzt sie erst nach Freigabe um. Verantwortung für Einordnung und Veröffentlichung bleibt bei der handelnden Person oder Organisation.",
   "steps": [
     "Vorhandenen Kontext auswerten",
     "Einstufung, Wortlaut und Platzierung empfehlen",
     "Erst nach ausdrücklicher Freigabe umsetzen"
   ],
   "task": "Prüfe dieses Posting vor der Veröffentlichung.",
-  "answer": "Ich prüfe KI-Anteil, Inhalt und Veröffentlichungskontext. Danach bekommst du eine klare Einstufung, den passenden Wortlaut und seine Platzierung. Eingefügt wird erst nach deiner Freigabe."
+  "answer": "Ich prüfe KI-Anteil, Inhalt und Veröffentlichungskontext und empfehle Einstufung, Wortlaut und Platzierung. Bei unklaren Fällen ändere ich nichts und empfehle fachkundige oder rechtliche Prüfung. Sonst wird erst nach deiner Freigabe eingefügt."
 }
